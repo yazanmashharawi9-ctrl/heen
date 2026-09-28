@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/moment.schema.json",
   "id": "calendar.ayyam_al_bid",
-  "rev": 1,
+  "rev": 2,
   "category": "calendar",
   "trigger": {
     "type": "hijri",
@@ -41,6 +41,11 @@
             {
               "grade": "hasan",
               "by": "al-Tirmidhi"
+            },
+            {
+              "grade": "sahih",
+              "by": "al-Albani",
+              "note": "حسن صحيح"
             }
           ],
           "url": "https://sunnah.com/tirmidhi:761"

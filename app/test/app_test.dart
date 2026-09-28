@@ -55,8 +55,8 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(find.text('عند نزول المطر'));
     await tester.pumpAndSettle();
-    expect(find.text('اللَّهُمَّ صَيِّبًا نَافِعًا'), findsOneWidget);
-    expect(find.textContaining('صحيح البخاري 1032'), findsOneWidget);
+    expect(find.text('اللَّهُمَّ اجْعَلْهُ صَيِّبًا نَافِعًا'), findsOneWidget);
+    expect(find.textContaining('سنن النسائي 1523'), findsOneWidget);
     expect(find.text('مسودة — لم يُراجَع هذا المحتوى بعد.'), findsOneWidget);
   });
 
@@ -73,8 +73,8 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(find.text('When it rains'));
     await tester.pumpAndSettle();
-    expect(find.text('Allāhumma ṣayyiban nāfiʿā'), findsOneWidget);
-    expect(find.text('O Allah, make it a beneficial rain.'), findsOneWidget);
+    expect(find.text('Allāhumma-jʿalhu ṣayyiban nāfiʿā'), findsOneWidget);
+    expect(find.text('O Allah, make it a beneficial downpour.'), findsOneWidget);
   });
 
   testWidgets('library search narrows results', (tester) async {

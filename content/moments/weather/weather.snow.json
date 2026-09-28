@@ -1,0 +1,83 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "weather.snow",
+  "rev": 1,
+  "category": "weather",
+  "trigger": {
+    "type": "weather",
+    "event": "SNOW"
+  },
+  "defaultOn": false,
+  "title": {
+    "ar": "عند نزول الثلج",
+    "en": "When it snows"
+  },
+  "push": {
+    "title": {
+      "ar": "ثلج في منطقتك ❄️",
+      "en": "Snow in your area ❄️"
+    },
+    "body": {
+      "ar": "من دعاء النبي ﷺ: «اللهم اغسل خطاياي بالماء والثلج والبَرَد»",
+      "en": "From the Prophet's ﷺ supplication: “O Allah, wash away my sins with water, snow and hail.”"
+    }
+  },
+  "items": [
+    {
+      "kind": "dua",
+      "ar": "اللَّهُمَّ اغْسِلْ خَطَايَايَ بِالْمَاءِ وَالثَّلْجِ وَالْبَرَدِ",
+      "translit": "Allāhumma-ghsil khaṭāyāya bi-l-māʾi wa-th-thalji wa-l-barad",
+      "tr": {
+        "en": "O Allah, wash away my sins with water, snow and hail."
+      },
+      "sources": [
+        {
+          "collection": "bukhari",
+          "number": "744",
+          "numbering": "fath_al_bari",
+          "narrator": "Abū Hurayrah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:744",
+          "note": "من دعاء الاستفتاح في الصلاة"
+        }
+      ],
+      "explain": {
+        "ar": "هذا من دعاء الاستفتاح الذي كان النبي ﷺ يقوله في صلاته، وليس دعاءً خاصًّا بنزول الثلج؛ لكن رؤية الثلج تذكّر بمعناه: أن يطهّرك الله من الذنوب كما يُنقّى الثوب بالماء والثلج والبرد.",
+        "en": "This is part of the opening supplication the Prophet ﷺ said in his prayer, not a du'a specific to snowfall; but seeing snow brings its meaning to mind — that Allah cleanse you of sins as a garment is cleansed with water, snow and hail."
+      },
+      "newMuslim": {
+        "ar": "دعاء الاستفتاح يُقال بعد تكبيرة الإحرام وقبل الفاتحة، وهذا جزءٌ منه يسهل حفظه.",
+        "en": "The opening supplication is said after the first takbir, before al-Fātiḥah; this line from it is easy to learn."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "دعاء-الثلج",
+      "en": "snow-dua"
+    },
+    "template": "snow"
+  },
+  "keywords": {
+    "ar": [
+      "ثلج",
+      "برد",
+      "شتاء",
+      "اغسل خطاياي"
+    ],
+    "en": [
+      "snow",
+      "hail",
+      "winter"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

@@ -17,6 +17,17 @@ No religious text ships before a qualified person has reviewed it.
 7. **الترجمة الإنجليزية** والنطق اللاتيني.
 8. **نص الإشعار**: لا يَعِد بشيء ولا يجزم بما لا نعلم (نقول «يبدو أن المطر ينزل»).
 
+## Sending the texts to the reviewer
+
+```bash
+npm run content:review-sheet     # every moment not yet approved
+```
+
+This writes `build/review/heen-review.pdf` (and `.html`): numbered items with the
+exact Arabic, sources with links, gradings, explanations and fiqh notes, and a
+tick box under each. The reviewer replies with the item number, e.g. «3.1 موافق»
+or «5.2 ملاحظة: …». Narrator and grader names come from `content/glossary.json`.
+
 ## How approval works
 
 ```bash

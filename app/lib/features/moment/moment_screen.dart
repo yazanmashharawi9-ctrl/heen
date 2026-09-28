@@ -190,18 +190,21 @@ class _Sources extends StatelessWidget {
   }
 }
 
-class _SourceTile extends StatelessWidget {
+class _SourceTile extends ConsumerWidget {
   const _SourceTile({required this.source});
 
   final Source source;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l = AppLocalizations.of(context);
+    final lang = ref.watch(settingsProvider.select((s) => s.languageCode));
+    final bundle = ref.watch(contentBundleProvider).value;
+    String name(String n) => bundle?.person(n, lang) ?? n;
     final lines = <String>[
-      if (source.narrator != null) l.narratedBy(source.narrator!),
+      if (source.narrator != null) l.narratedBy(name(source.narrator!)),
       if (source.type == NarrationType.mawquf) l.sourceMawquf,
-      for (final g in source.grades) l.gradedBy(l.grade(g.grade), g.by) + (g.note == null ? '' : ' (${g.note})'),
+      for (final g in source.grades) l.gradedBy(l.grade(g.grade), name(g.by)) + (g.note == null ? '' : ' (${g.note})'),
       if (source.note != null) source.note!,
     ];
     return ListTile(

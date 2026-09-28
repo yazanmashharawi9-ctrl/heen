@@ -13,7 +13,8 @@
     "content:format": "node tools/content/format.ts",
     "content:review": "node tools/content/review.ts",
     "test": "node --test \"tools/**/*.test.ts\" \"supabase/functions/_shared/**/*.test.ts\"",
-    "typecheck": "tsc -p tsconfig.json"
+    "typecheck": "tsc -p tsconfig.json",
+    "content:review-sheet": "node tools/content/review-sheet.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.3",

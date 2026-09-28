@@ -1,0 +1,156 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "weather.heat",
+  "rev": 1,
+  "category": "weather",
+  "trigger": {
+    "type": "weather",
+    "event": "HEAT"
+  },
+  "defaultOn": false,
+  "title": {
+    "ar": "في الحرّ الشديد",
+    "en": "In extreme heat"
+  },
+  "push": {
+    "title": {
+      "ar": "حرّ شديد اليوم ☀️",
+      "en": "Extreme heat today ☀️"
+    },
+    "body": {
+      "ar": "«في كل كبدٍ رطبةٍ أجر» — ضع ماءً للعطشى من الناس والطير والحيوان.",
+      "en": "“There is reward in every living being” — leave water out for thirsty people, birds and animals."
+    }
+  },
+  "items": [
+    {
+      "kind": "practice",
+      "ar": "سقي الماء من أعظم الصدقات: ضع ماءً للعمّال والمارّة، وللطير والحيوان.",
+      "quote": "«فِي كُلِّ كَبِدٍ رَطْبَةٍ أَجْرٌ»",
+      "tr": {
+        "en": "Giving water is among the best charity: leave water for workers and passers-by, and for birds and animals."
+      },
+      "sources": [
+        {
+          "collection": "bukhari",
+          "number": "2363",
+          "numbering": "fath_al_bari",
+          "narrator": "Abū Hurayrah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:2363",
+          "note": "قصة الرجل الذي سقى كلبًا عطشان فغفر الله له"
+        },
+        {
+          "collection": "abudawud",
+          "number": "1679",
+          "numbering": "sunnah.com",
+          "narrator": "Saʿd ibn ʿUbādah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "hasan",
+              "by": "al-Albani"
+            },
+            {
+              "grade": "daif",
+              "by": "Zubair Ali Zai"
+            }
+          ],
+          "url": "https://sunnah.com/abudawud:1679",
+          "note": "«أيّ الصدقة أعجب إليك؟ قال: الماء»"
+        }
+      ],
+      "explain": {
+        "ar": "أخبر النبي ﷺ أن رجلًا سقى كلبًا عطشان فشكر الله له فغفر له، فقالوا: وإنّ لنا في البهائم أجرًا؟ قال: «في كل كبدٍ رطبةٍ أجر»، أي في الإحسان إلى كل ذي روح.",
+        "en": "The Prophet ﷺ told of a man who gave water to a thirsty dog, so Allah thanked him and forgave him. They asked: is there reward for us even with animals? He said: “There is reward in every living being.”"
+      },
+      "newMuslim": {
+        "ar": "صدقةٌ سهلة: قارورة ماء لعامل في الشارع، أو إناء ماء للطيور على الشرفة.",
+        "en": "An easy charity: a bottle of water for a worker outside, or a bowl of water for birds on your balcony."
+      }
+    },
+    {
+      "kind": "practice",
+      "ar": "إذا اشتدّ الحرّ يُستحب تأخير صلاة الظهر حتى يخفّ الحرّ، ما دامت في وقتها.",
+      "quote": "إِذَا اشْتَدَّ الْحَرُّ فَأَبْرِدُوا عَنِ الصَّلَاةِ، فَإِنَّ شِدَّةَ الْحَرِّ مِنْ فَيْحِ جَهَنَّمَ",
+      "tr": {
+        "en": "When the heat is intense, it is recommended to delay the Dhuhr prayer until it cools a little, within its time."
+      },
+      "sources": [
+        {
+          "collection": "bukhari",
+          "number": "533",
+          "numbering": "fath_al_bari",
+          "narrator": "Abū Hurayrah and ʿAbdullāh ibn ʿUmar",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:533"
+        }
+      ],
+      "explain": {
+        "ar": "«فأبردوا» أي: أخّروا صلاة الظهر إلى وقتٍ أبرد دون أن تخرج عن وقتها. وشدّة الحرّ تذكّر بحرّ جهنم، أعاذنا الله منها.",
+        "en": "“Wait until it is cooler” means delay Dhuhr to a cooler part of its time, never beyond it. And the fierce heat is a reminder of the heat of Hell — may Allah protect us from it."
+      },
+      "newMuslim": {
+        "ar": "الإبراد يعني أن تصلّي الظهر في آخر وقتها حين يخفّ الحرّ، لا أن تؤخّرها عن وقتها.",
+        "en": "Delaying means praying Dhuhr later in its own time when it is cooler — never after its time ends."
+      }
+    }
+  ],
+  "fiqh": [
+    {
+      "topic": {
+        "ar": "الإبراد بصلاة الظهر",
+        "en": "Delaying Dhuhr in the heat"
+      },
+      "majority": {
+        "ar": "يُستحب الإبراد بالظهر في شدة الحر ما لم يخرج وقتها.",
+        "en": "Delaying Dhuhr in intense heat is recommended, as long as it stays within its time."
+      },
+      "differences": [
+        {
+          "madhhab": "shafii",
+          "text": {
+            "ar": "يخصّونه بمن يصلي جماعةً في مسجدٍ يقصده الناس من بعيد في البلاد الحارّة.",
+            "en": "They limit it to those praying in congregation at a mosque people walk to from afar, in hot lands."
+          }
+        }
+      ]
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "الحر-الشديد",
+      "en": "extreme-heat"
+    },
+    "template": "heat"
+  },
+  "keywords": {
+    "ar": [
+      "حر",
+      "حرارة",
+      "صيف",
+      "سقي الماء",
+      "صدقة"
+    ],
+    "en": [
+      "heat",
+      "summer",
+      "water charity"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

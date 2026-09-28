@@ -1,0 +1,82 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "weather.rain_first_of_season",
+  "rev": 1,
+  "category": "weather",
+  "trigger": {
+    "type": "weather",
+    "event": "RAIN_FIRST_OF_SEASON"
+  },
+  "defaultOn": true,
+  "title": {
+    "ar": "أول مطر في الموسم",
+    "en": "The first rain of the season"
+  },
+  "push": {
+    "title": {
+      "ar": "أول مطرة هذا الموسم 🌧️",
+      "en": "The season's first rain 🌧️"
+    },
+    "body": {
+      "ar": "كان النبي ﷺ يكشف شيئًا من ثوبه ليصيبه المطر ويقول: «لأنه حديث عهدٍ بربّه»",
+      "en": "The Prophet ﷺ would uncover part of his body to the rain, saying: “It has just come from its Lord.”"
+    }
+  },
+  "items": [
+    {
+      "kind": "practice",
+      "ar": "أن تكشف شيئًا من جسدك — كالرأس أو الذراع — ليصيبه المطر، اقتداءً بالنبي ﷺ.",
+      "quote": "أَصَابَنَا وَنَحْنُ مَعَ رَسُولِ اللَّهِ ﷺ مَطَرٌ، فَحَسَرَ رَسُولُ اللَّهِ ﷺ ثَوْبَهُ حَتَّى أَصَابَهُ مِنَ الْمَطَرِ، فَقُلْنَا: يَا رَسُولَ اللَّهِ، لِمَ صَنَعْتَ هَذَا؟ قَالَ: «لِأَنَّهُ حَدِيثُ عَهْدٍ بِرَبِّهِ تَعَالَى»",
+      "tr": {
+        "en": "Uncover part of your body — your head or arm — so the rain touches it, following the Prophet ﷺ."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "898",
+          "numbering": "abdul_baqi",
+          "narrator": "Anas ibn Mālik",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:898"
+        }
+      ],
+      "explain": {
+        "ar": "«حديث عهدٍ بربّه» أي: قريبُ العهد بخلق الله له وإنزاله. وهذه السنّة ليست خاصة بأول المطر، لكن «حِين» يذكّرك بها مع أول مطرة في الموسم.",
+        "en": "“It has just come from its Lord” means it was only just created and sent down by Allah. This Sunnah is not limited to the first rain, but Heen reminds you of it with the season's first."
+      },
+      "newMuslim": {
+        "ar": "لا يلزمك أن تبتلّ كلّك؛ يكفي أن تكشف رأسك أو يدك قليلًا للمطر.",
+        "en": "You don't need to get soaked — uncovering your head or hand for a moment is enough."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "أول-المطر",
+      "en": "first-rain"
+    },
+    "template": "rain"
+  },
+  "keywords": {
+    "ar": [
+      "أول مطر",
+      "مطر",
+      "حديث عهد بربه",
+      "شتوة"
+    ],
+    "en": [
+      "first rain",
+      "rain",
+      "season"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

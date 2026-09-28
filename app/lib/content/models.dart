@@ -241,21 +241,33 @@ class Moment {
 }
 
 class ContentBundle {
-  ContentBundle({required this.format, required this.release, required this.contentHash, required this.moments})
-    : _byId = {for (final m in moments) m.id: m};
+  ContentBundle({
+    required this.format,
+    required this.release,
+    required this.contentHash,
+    required this.moments,
+    this.people = const {},
+  }) : _byId = {for (final m in moments) m.id: m};
 
   factory ContentBundle.fromJson(JsonMap m) => ContentBundle(
     format: m['format'] as int,
     release: m['release'] as bool,
     contentHash: m['contentHash'] as String,
     moments: [for (final x in m['moments'] as List) Moment.fromJson(x as JsonMap)],
+    people: {for (final e in (m['people'] as JsonMap? ?? const {}).entries) e.key: e.value as String},
   );
 
   final int format;
   final bool release;
   final String contentHash;
   final List<Moment> moments;
+
+  /// Narrator and grader names as written in the sources (Latin) → Arabic.
+  final Map<String, String> people;
   final Map<String, Moment> _byId;
+
+  /// A narrator's or grader's name in the UI language.
+  String person(String name, String languageCode) => languageCode == 'ar' ? (people[name] ?? name) : name;
 
   Moment? byId(String id) => _byId[id];
 

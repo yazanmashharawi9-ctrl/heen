@@ -10,6 +10,7 @@ export const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 export const MOMENTS_DIR = join(ROOT, "content", "moments");
 export const SCHEMA_PATH = join(ROOT, "content", "schema", "moment.schema.json");
 export const APP_BUNDLE_PATH = join(ROOT, "app", "assets", "content", "moments.json");
+export const GLOSSARY_PATH = join(ROOT, "content", "glossary.json");
 
 export type Json = null | boolean | number | string | Json[] | { [key: string]: Json };
 export type Moment = { [key: string]: Json };
@@ -65,6 +66,12 @@ export function contentHash(moment: Moment): string {
   delete copy.review;
   delete copy.$schema;
   return `sha256:${createHash("sha256").update(canonicalize(copy)).digest("hex")}`;
+}
+
+/** Latin name used in sources → Arabic name (content/glossary.json). */
+export function loadPeople(): Record<string, string> {
+  const raw = JSON.parse(readFileSync(GLOSSARY_PATH, "utf8")) as { people: Record<string, { ar: string }> };
+  return Object.fromEntries(Object.entries(raw.people).map(([name, v]) => [name, v.ar]));
 }
 
 export function writeMoment(path: string, data: Moment): void {

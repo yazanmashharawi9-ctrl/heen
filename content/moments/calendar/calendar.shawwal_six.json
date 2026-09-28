@@ -1,0 +1,93 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "calendar.shawwal_six",
+  "rev": 1,
+  "category": "calendar",
+  "trigger": {
+    "type": "hijri",
+    "rule": "SHAWWAL_SIX"
+  },
+  "defaultOn": true,
+  "title": {
+    "ar": "ستّ من شوّال",
+    "en": "Six days of Shawwal"
+  },
+  "push": {
+    "title": {
+      "ar": "صيام ستٍّ من شوّال 🌙",
+      "en": "Six fasts of Shawwal 🌙"
+    },
+    "body": {
+      "ar": "من صام رمضان ثم أتبعه ستًّا من شوّال كان كصيام الدهر.",
+      "en": "Whoever fasts Ramadan and follows it with six days of Shawwal, it is as if he fasted the whole year."
+    }
+  },
+  "items": [
+    {
+      "kind": "practice",
+      "ar": "صيام ستة أيام من شهر شوّال بعد يوم العيد، متتابعةً أو متفرّقة.",
+      "quote": "مَنْ صَامَ رَمَضَانَ ثُمَّ أَتْبَعَهُ سِتًّا مِنْ شَوَّالٍ كَانَ كَصِيَامِ الدَّهْرِ",
+      "tr": {
+        "en": "Fasting six days of Shawwal after the day of Eid, in a row or spread out."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "1164",
+          "numbering": "abdul_baqi",
+          "narrator": "Abū Ayyūb al-Anṣārī",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:1164a"
+        }
+      ],
+      "explain": {
+        "ar": "قال العلماء: الحسنة بعشر أمثالها، فرمضان بعشرة أشهر، والستّ بشهرين، فذلك تمام السنة. ولا يُصام يوم العيد نفسه.",
+        "en": "Scholars explain: each good deed is multiplied tenfold, so Ramadan equals ten months and the six days two months — a full year. The day of Eid itself is not fasted."
+      },
+      "newMuslim": {
+        "ar": "ابدأ من اليوم الثاني من شوّال أو بعده، ولا يلزم أن تكون متتالية.",
+        "en": "Start from the 2nd of Shawwal or later; the days don't have to be consecutive."
+      }
+    }
+  ],
+  "fiqh": [
+    {
+      "topic": {
+        "ar": "من عليه قضاءٌ من رمضان",
+        "en": "If you still owe days from Ramadan"
+      },
+      "majority": {
+        "ar": "الأَولى تقديم قضاء رمضان على صيام الستّ، لظاهر قوله ﷺ: «من صام رمضان ثم أتبعه»، وفي المسألة خلافٌ بين العلماء.",
+        "en": "It is better to make up missed Ramadan days before the six, given the wording “whoever fasts Ramadan and then follows it”; scholars differ on this."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "ست-من-شوال",
+      "en": "six-days-of-shawwal"
+    },
+    "template": "calendar"
+  },
+  "keywords": {
+    "ar": [
+      "شوال",
+      "ست من شوال",
+      "صيام الدهر"
+    ],
+    "en": [
+      "shawwal",
+      "six days",
+      "fasting"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

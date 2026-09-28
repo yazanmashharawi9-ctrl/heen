@@ -1,0 +1,106 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "calendar.monday_thursday",
+  "rev": 1,
+  "category": "calendar",
+  "trigger": {
+    "type": "weekday",
+    "days": [
+      1,
+      4
+    ],
+    "at": "EVENING_BEFORE"
+  },
+  "defaultOn": false,
+  "title": {
+    "ar": "صيام الاثنين والخميس",
+    "en": "Fasting Mondays and Thursdays"
+  },
+  "push": {
+    "title": {
+      "ar": "غدًا تُعرض الأعمال 🤍",
+      "en": "Tomorrow deeds are presented 🤍"
+    },
+    "body": {
+      "ar": "كان النبي ﷺ يحب أن يُعرض عمله وهو صائم. انوِ صيام الغد إن استطعت.",
+      "en": "The Prophet ﷺ loved for his deeds to be presented while he was fasting. Intend to fast tomorrow if you can."
+    }
+  },
+  "items": [
+    {
+      "kind": "practice",
+      "ar": "صيام يومي الاثنين والخميس تطوّعًا.",
+      "quote": "تُعْرَضُ الْأَعْمَالُ يَوْمَ الِاثْنَيْنِ وَالْخَمِيسِ، فَأُحِبُّ أَنْ يُعْرَضَ عَمَلِي وَأَنَا صَائِمٌ",
+      "tr": {
+        "en": "Fasting Mondays and Thursdays voluntarily."
+      },
+      "sources": [
+        {
+          "collection": "tirmidhi",
+          "number": "747",
+          "numbering": "sunnah.com",
+          "narrator": "Abū Hurayrah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "hasan",
+              "by": "al-Tirmidhi",
+              "note": "قال: حسن غريب"
+            },
+            {
+              "grade": "sahih",
+              "by": "al-Albani"
+            }
+          ],
+          "url": "https://sunnah.com/tirmidhi:747"
+        },
+        {
+          "collection": "muslim",
+          "number": "1162",
+          "numbering": "abdul_baqi",
+          "narrator": "Abū Qatādah al-Anṣārī",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:1162b",
+          "note": "سُئل عن صوم يوم الاثنين فقال: «ذاك يومٌ وُلدتُ فيه، ويومٌ بُعثتُ أو أُنزل عليّ فيه»"
+        }
+      ],
+      "explain": {
+        "ar": "تُعرض الأعمال على الله يومي الاثنين والخميس، فأحبّ النبي ﷺ أن يُعرض عمله وهو صائم. وسُئل عن صوم الاثنين فقال: «ذاك يومٌ وُلدتُ فيه، ويومٌ بُعثتُ أو أُنزل عليّ فيه».",
+        "en": "Deeds are presented to Allah on Mondays and Thursdays, and the Prophet ﷺ loved for his to be presented while fasting. Asked about fasting on Monday, he said: “That is the day I was born and the day I was sent (or revelation came to me).”"
+      },
+      "newMuslim": {
+        "ar": "صيام تطوّع: انوِ من الليل، وامتنع عن الأكل والشرب من الفجر إلى المغرب.",
+        "en": "A voluntary fast: make the intention the night before, and abstain from food and drink from Fajr until Maghrib."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "صيام-الاثنين-والخميس",
+      "en": "monday-thursday-fasting"
+    },
+    "template": "calendar"
+  },
+  "keywords": {
+    "ar": [
+      "الاثنين",
+      "الخميس",
+      "صيام التطوع",
+      "عرض الأعمال"
+    ],
+    "en": [
+      "monday",
+      "thursday",
+      "voluntary fast"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

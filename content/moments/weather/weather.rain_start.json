@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/moment.schema.json",
   "id": "weather.rain_start",
-  "rev": 1,
+  "rev": 2,
   "category": "weather",
   "trigger": {
     "type": "weather",
@@ -18,19 +18,37 @@
       "en": "It seems to be raining near you 🌧️"
     },
     "body": {
-      "ar": "كان النبي ﷺ إذا رأى المطر قال: «اللهم صيّبًا نافعًا»",
-      "en": "When the Prophet ﷺ saw rain he would say: “Allāhumma ṣayyiban nāfiʿā”"
+      "ar": "كان النبي ﷺ إذا رأى المطر قال: «اللهم اجعله صيّبًا نافعًا»",
+      "en": "When the Prophet ﷺ saw rain he would say: “Allāhumma-jʿalhu ṣayyiban nāfiʿā”"
     }
   },
   "items": [
     {
       "kind": "dua",
-      "ar": "اللَّهُمَّ صَيِّبًا نَافِعًا",
-      "translit": "Allāhumma ṣayyiban nāfiʿā",
+      "ar": "اللَّهُمَّ اجْعَلْهُ صَيِّبًا نَافِعًا",
+      "translit": "Allāhumma-jʿalhu ṣayyiban nāfiʿā",
       "tr": {
-        "en": "O Allah, make it a beneficial rain."
+        "en": "O Allah, make it a beneficial downpour."
       },
       "sources": [
+        {
+          "collection": "nasai",
+          "number": "1523",
+          "numbering": "sunnah.com",
+          "narrator": "ʿĀʾishah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Albani"
+            },
+            {
+              "grade": "sahih",
+              "by": "Abu Ghuddah"
+            }
+          ],
+          "url": "https://sunnah.com/nasai:1523"
+        },
         {
           "collection": "bukhari",
           "number": "1032",
@@ -43,12 +61,13 @@
               "by": "al-Bukhari"
             }
           ],
-          "url": "https://sunnah.com/bukhari:1032"
+          "url": "https://sunnah.com/bukhari:1032",
+          "note": "بلفظ: «صَيِّبًا نَافِعًا»"
         }
       ],
       "explain": {
-        "ar": "«الصيّب» هو المطر المنهمر. والمعنى: اجعله يا ربّ مطرًا غزيرًا نافعًا لا ضرر فيه.",
-        "en": "“Ṣayyib” is rain that pours down. The meaning is: O Lord, make it abundant rain that brings benefit and no harm."
+        "ar": "«الصيّب» هو المطر المنهمر. والمعنى: اجعله يا ربّ مطرًا غزيرًا نافعًا لا ضرر فيه. ولفظ البخاري: «صيّبًا نافعًا».",
+        "en": "“Ṣayyib” is rain that pours down. The meaning: O Lord, make it abundant rain that brings benefit and no harm. Al-Bukhari's wording is “ṣayyiban nāfiʿā”."
       },
       "newMuslim": {
         "ar": "دعاء قصير جدًا كان النبي ﷺ يقوله كلما رأى المطر. قله الآن بقلب حاضر، ولا بأس أن تقرأه من الشاشة.",

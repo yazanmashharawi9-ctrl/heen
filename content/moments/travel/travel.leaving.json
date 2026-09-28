@@ -1,0 +1,83 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "travel.leaving",
+  "rev": 1,
+  "category": "travel",
+  "trigger": {
+    "type": "travel",
+    "event": "LEAVING"
+  },
+  "defaultOn": true,
+  "title": {
+    "ar": "عند الخروج للسفر",
+    "en": "Setting out on a journey"
+  },
+  "push": {
+    "title": {
+      "ar": "هل أنت مسافر؟ 🚗",
+      "en": "Setting out on a journey? 🚗"
+    },
+    "body": {
+      "ar": "دعاء السفر: «الله أكبر ثلاثًا، سبحان الذي سخّر لنا هذا وما كنّا له مقرنين…»",
+      "en": "The travel du'a: “Allāhu akbar ×3. Glory be to Him who has subjected this to us…”"
+    }
+  },
+  "items": [
+    {
+      "kind": "dua",
+      "ar": "اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ، وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ، اللَّهُمَّ إِنَّا نَسْأَلُكَ فِي سَفَرِنَا هَذَا الْبِرَّ وَالتَّقْوَى، وَمِنَ الْعَمَلِ مَا تَرْضَى، اللَّهُمَّ هَوِّنْ عَلَيْنَا سَفَرَنَا هَذَا، وَاطْوِ عَنَّا بُعْدَهُ، اللَّهُمَّ أَنْتَ الصَّاحِبُ فِي السَّفَرِ، وَالْخَلِيفَةُ فِي الْأَهْلِ، اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ وَعْثَاءِ السَّفَرِ، وَكَآبَةِ الْمَنْظَرِ، وَسُوءِ الْمُنْقَلَبِ فِي الْمَالِ وَالْأَهْلِ",
+      "translit": "Allāhu akbar, Allāhu akbar, Allāhu akbar. Subḥāna-lladhī sakhkhara lanā hādhā wa mā kunnā lahū muqrinīn, wa innā ilā rabbinā la-munqalibūn. Allāhumma innā nasʾaluka fī safarinā hādha-l-birra wa-t-taqwā, wa mina-l-ʿamali mā tarḍā. Allāhumma hawwin ʿalaynā safaranā hādhā wa-ṭwi ʿannā buʿdah. Allāhumma anta-ṣ-ṣāḥibu fi-s-safar, wa-l-khalīfatu fi-l-ahl. Allāhumma innī aʿūdhu bika min waʿthāʾi-s-safar, wa kaʾābati-l-manẓar, wa sūʾi-l-munqalabi fi-l-māli wa-l-ahl",
+      "tr": {
+        "en": "Allah is the Greatest (three times). Glory be to Him who has subjected this to us — we could never have done it ourselves — and to our Lord we shall return. O Allah, we ask You on this journey for righteousness and piety, and for deeds that please You. O Allah, make this journey easy for us and shorten its distance. O Allah, You are the Companion on the journey and the Guardian of the family. O Allah, I seek refuge in You from the hardship of travel, from distressing sights, and from an ill return to my wealth and family."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "1342",
+          "numbering": "abdul_baqi",
+          "narrator": "ʿAbdullāh ibn ʿUmar",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:1342"
+        }
+      ],
+      "explain": {
+        "ar": "كان النبي ﷺ إذا استوى على بعيره خارجًا إلى سفرٍ كبّر ثلاثًا ثم قال هذا الدعاء. ويقوله المسافر اليوم إذا ركب سيارته أو الحافلة أو الطائرة في بداية سفره.",
+        "en": "When the Prophet ﷺ mounted his camel to set out on a journey, he said takbir three times and then this du'a. Today a traveller says it on getting into the car, bus or plane at the start of the trip."
+      },
+      "newMuslim": {
+        "ar": "إن صعب عليك حفظه كاملًا فابدأ بأوله: «الله أكبر» ثلاثًا، ثم «سبحان الذي سخّر لنا هذا وما كنّا له مقرنين، وإنّا إلى ربّنا لمنقلبون».",
+        "en": "If the whole du'a is hard to memorise, start with its beginning: “Allāhu akbar” three times, then “Glory be to Him who has subjected this to us… and to our Lord we shall return.”"
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "دعاء-السفر",
+      "en": "travel-dua"
+    },
+    "template": "travel"
+  },
+  "keywords": {
+    "ar": [
+      "سفر",
+      "دعاء السفر",
+      "دعاء الركوب",
+      "رحلة"
+    ],
+    "en": [
+      "travel",
+      "journey",
+      "travel dua",
+      "trip"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

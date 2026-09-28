@@ -1,0 +1,83 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "weather.cold",
+  "rev": 1,
+  "category": "weather",
+  "trigger": {
+    "type": "weather",
+    "event": "COLD"
+  },
+  "defaultOn": false,
+  "title": {
+    "ar": "في البرد الشديد",
+    "en": "In bitter cold"
+  },
+  "push": {
+    "title": {
+      "ar": "برد شديد اليوم 🥶",
+      "en": "Bitter cold today 🥶"
+    },
+    "body": {
+      "ar": "إسباغ الوضوء على المكاره يمحو الله به الخطايا ويرفع به الدرجات.",
+      "en": "Completing wudu despite hardship is how Allah wipes away sins and raises ranks."
+    }
+  },
+  "items": [
+    {
+      "kind": "practice",
+      "ar": "إتمام الوضوء وإسباغه رغم برودة الجو ومشقّة الماء.",
+      "quote": "أَلَا أَدُلُّكُمْ عَلَى مَا يَمْحُو اللَّهُ بِهِ الْخَطَايَا وَيَرْفَعُ بِهِ الدَّرَجَاتِ؟ قَالُوا: بَلَى يَا رَسُولَ اللَّهِ، قَالَ: «إِسْبَاغُ الْوُضُوءِ عَلَى الْمَكَارِهِ، وَكَثْرَةُ الْخُطَا إِلَى الْمَسَاجِدِ، وَانْتِظَارُ الصَّلَاةِ بَعْدَ الصَّلَاةِ، فَذَلِكُمُ الرِّبَاطُ»",
+      "tr": {
+        "en": "Completing wudu thoroughly despite the cold and the discomfort."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "251",
+          "numbering": "abdul_baqi",
+          "narrator": "Abū Hurayrah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:251a"
+        }
+      ],
+      "explain": {
+        "ar": "«إسباغ الوضوء على المكاره» أي: إتمامه وإيصال الماء إلى أعضائه كاملة مع المشقة، كشدّة البرد. ولا حرج في تسخين الماء؛ فالأجر في الإسباغ لا في تعمّد الأذى.",
+        "en": "“Completing wudu despite hardship” means washing every part fully even when it is hard, as in bitter cold. Warming the water is fine — the reward is in completeness, not in seeking discomfort."
+      },
+      "newMuslim": {
+        "ar": "إن كان الماء باردًا جدًا فاستعمل الماء الدافئ، والمهم أن تغسل كل عضوٍ غسلًا كاملًا.",
+        "en": "If the water is very cold, use warm water — what matters is washing each part fully."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "الوضوء-في-البرد",
+      "en": "wudu-in-the-cold"
+    },
+    "template": "cold"
+  },
+  "keywords": {
+    "ar": [
+      "برد",
+      "شتاء",
+      "وضوء",
+      "إسباغ الوضوء"
+    ],
+    "en": [
+      "cold",
+      "winter",
+      "wudu",
+      "ablution"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

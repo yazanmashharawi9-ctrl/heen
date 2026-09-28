@@ -1,0 +1,150 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "calendar.last_ten_nights",
+  "rev": 1,
+  "category": "calendar",
+  "trigger": {
+    "type": "hijri",
+    "rule": "LAST_TEN_NIGHTS"
+  },
+  "defaultOn": true,
+  "title": {
+    "ar": "العشر الأواخر وليلة القدر",
+    "en": "The last ten nights and Laylat al-Qadr"
+  },
+  "push": {
+    "title": {
+      "ar": "دخلت العشر الأواخر ✨",
+      "en": "The last ten nights have begun ✨"
+    },
+    "body": {
+      "ar": "تحرَّ ليلة القدر، وأكثِر من: «اللهم إنك عفوٌّ تحب العفو فاعفُ عني»",
+      "en": "Seek Laylat al-Qadr, and say often: “O Allah, You are Pardoning and love to pardon, so pardon me.”"
+    }
+  },
+  "items": [
+    {
+      "kind": "dua",
+      "ar": "اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
+      "translit": "Allāhumma innaka ʿafuwwun tuḥibbu-l-ʿafwa faʿfu ʿannī",
+      "tr": {
+        "en": "O Allah, You are Pardoning and You love to pardon, so pardon me."
+      },
+      "sources": [
+        {
+          "collection": "ibnmajah",
+          "number": "3850",
+          "numbering": "sunnah.com",
+          "narrator": "ʿĀʾishah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Albani"
+            }
+          ],
+          "url": "https://sunnah.com/ibnmajah:3850"
+        },
+        {
+          "collection": "tirmidhi",
+          "number": "3513",
+          "numbering": "sunnah.com",
+          "narrator": "ʿĀʾishah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Tirmidhi",
+              "note": "قال: حسن صحيح"
+            },
+            {
+              "grade": "sahih",
+              "by": "al-Albani"
+            }
+          ],
+          "url": "https://sunnah.com/tirmidhi:3513",
+          "note": "في المطبوع بزيادة «كريم»، ولم ترد في رواية ابن ماجه"
+        }
+      ],
+      "explain": {
+        "ar": "سألت عائشة رضي الله عنها النبيَّ ﷺ: إن وافقتُ ليلة القدر، ما أقول؟ فعلّمها هذا الدعاء. والعفو: محو الذنب وترك المؤاخذة به.",
+        "en": "ʿĀʾishah asked the Prophet ﷺ what to say if she found Laylat al-Qadr, and he taught her this du'a. Pardon (ʿafw) means the sin is erased and not held against you."
+      },
+      "newMuslim": {
+        "ar": "ليلة القدر خيرٌ من ألف شهر، وهي في العشر الأواخر من رمضان. ردّد هذا الدعاء كثيرًا في لياليها.",
+        "en": "Laylat al-Qadr is better than a thousand months and falls in the last ten nights of Ramadan. Repeat this du'a often in those nights."
+      }
+    },
+    {
+      "kind": "practice",
+      "ar": "إحياء ليالي العشر الأواخر بالصلاة والدعاء وقراءة القرآن، وإيقاظ الأهل لذلك.",
+      "quote": "كَانَ النَّبِيُّ ﷺ إِذَا دَخَلَ الْعَشْرُ شَدَّ مِئْزَرَهُ، وَأَحْيَا لَيْلَهُ، وَأَيْقَظَ أَهْلَهُ",
+      "tr": {
+        "en": "Spending the last ten nights in prayer, du'a and Qur'an, and waking the family for it."
+      },
+      "sources": [
+        {
+          "collection": "bukhari",
+          "number": "2024",
+          "numbering": "fath_al_bari",
+          "narrator": "ʿĀʾishah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:2024"
+        },
+        {
+          "collection": "bukhari",
+          "number": "2017",
+          "numbering": "fath_al_bari",
+          "narrator": "ʿĀʾishah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:2017",
+          "note": "«تحرّوا ليلة القدر في الوتر من العشر الأواخر من رمضان»"
+        }
+      ],
+      "explain": {
+        "ar": "«شدّ مئزره» أي: اجتهد في العبادة. وتُتحرّى ليلة القدر في الليالي الوتر من العشر الأواخر.",
+        "en": "“He tightened his waist-wrap” means he strove hard in worship. Laylat al-Qadr is sought especially in the odd nights of the last ten."
+      },
+      "newMuslim": {
+        "ar": "ولو صلاةٌ قليلة ودعاءٌ صادق كل ليلة — لا تستصغر شيئًا في هذه الليالي.",
+        "en": "Even a short prayer and a sincere du'a each night counts — nothing is small in these nights."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "ليلة-القدر",
+      "en": "laylat-al-qadr"
+    },
+    "template": "night"
+  },
+  "keywords": {
+    "ar": [
+      "ليلة القدر",
+      "العشر الأواخر",
+      "رمضان",
+      "عفو"
+    ],
+    "en": [
+      "laylat al qadr",
+      "last ten nights",
+      "ramadan",
+      "night of power"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "weather.rain_heavy",
+  "rev": 1,
+  "category": "weather",
+  "trigger": {
+    "type": "weather",
+    "event": "RAIN_HEAVY"
+  },
+  "defaultOn": false,
+  "title": {
+    "ar": "عند المطر الغزير",
+    "en": "During heavy rain"
+  },
+  "push": {
+    "title": {
+      "ar": "مطر غزير حولك ⛈️",
+      "en": "Heavy rain around you ⛈️"
+    },
+    "body": {
+      "ar": "قل كما قال النبي ﷺ: «اللهم حوالينا ولا علينا». وخذ حذرك من السيول.",
+      "en": "Say as the Prophet ﷺ said: “O Allah, around us and not upon us.” And take care near floodwater."
+    }
+  },
+  "items": [
+    {
+      "kind": "dua",
+      "ar": "اللَّهُمَّ حَوَالَيْنَا وَلَا عَلَيْنَا، اللَّهُمَّ عَلَى الْآكَامِ وَالْجِبَالِ وَالْآجَامِ وَالظِّرَابِ وَالْأَوْدِيَةِ وَمَنَابِتِ الشَّجَرِ",
+      "translit": "Allāhumma ḥawālaynā wa lā ʿalaynā, Allāhumma ʿala-l-ākāmi wa-l-jibāli wa-l-ājāmi wa-ẓ-ẓirābi wa-l-awdiyati wa manābiti-sh-shajar",
+      "tr": {
+        "en": "O Allah, around us and not upon us. O Allah, upon the hills, the mountains, the thickets, the high ground, the valleys and where the trees grow."
+      },
+      "sources": [
+        {
+          "collection": "bukhari",
+          "number": "1013",
+          "numbering": "fath_al_bari",
+          "narrator": "Anas ibn Mālik",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:1013"
+        },
+        {
+          "collection": "muslim",
+          "number": "897",
+          "numbering": "abdul_baqi",
+          "narrator": "Anas ibn Mālik",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:897b",
+          "note": "بلفظ: «اللهم حوالينا ولا علينا»"
+        }
+      ],
+      "explain": {
+        "ar": "استسقى النبي ﷺ يوم الجمعة فنزل المطر أسبوعًا، فجاء رجلٌ يشكو كثرته، فدعا بهذا: أن يصرفه الله إلى حيث ينفع — التلال والجبال والأودية ومنابت الشجر — لا على البيوت والطرق.",
+        "en": "The Prophet ﷺ prayed for rain on a Friday and it rained for a week; when a man complained of too much rain, he made this du'a — that Allah turn it to where it benefits (hills, mountains, valleys, pastures), not onto homes and roads."
+      },
+      "newMuslim": {
+        "ar": "إن اشتدّ المطر حتى تخاف الضرر، فلا تسبّه ولا تتذمّر، بل ادعُ بهذا الدعاء. واحذر السيول والأماكن المنخفضة.",
+        "en": "If the rain becomes heavy enough to fear harm, don't curse it — make this du'a instead. And stay away from floodwater and low ground."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "دعاء-المطر-الغزير",
+      "en": "heavy-rain-dua"
+    },
+    "template": "storm"
+  },
+  "keywords": {
+    "ar": [
+      "مطر غزير",
+      "سيول",
+      "حوالينا ولا علينا",
+      "عاصفة"
+    ],
+    "en": [
+      "heavy rain",
+      "flood",
+      "storm",
+      "dua"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

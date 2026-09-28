@@ -1,0 +1,91 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "weather.thunder",
+  "rev": 1,
+  "category": "weather",
+  "trigger": {
+    "type": "weather",
+    "event": "THUNDER"
+  },
+  "defaultOn": false,
+  "title": {
+    "ar": "عند سماع الرعد",
+    "en": "On hearing thunder"
+  },
+  "push": {
+    "title": {
+      "ar": "رعد في منطقتك ⚡",
+      "en": "Thunder in your area ⚡"
+    },
+    "body": {
+      "ar": "كان ابن الزبير إذا سمع الرعد ترك الحديث وقال: «سبحان الذي يسبّح الرعد بحمده والملائكة من خيفته»",
+      "en": "On hearing thunder, Ibn al-Zubayr would stop talking and say: “Glory be to the One whom the thunder glorifies…”"
+    }
+  },
+  "items": [
+    {
+      "kind": "dhikr",
+      "ar": "سُبْحَانَ الَّذِي يُسَبِّحُ الرَّعْدُ بِحَمْدِهِ وَالْمَلَائِكَةُ مِنْ خِيفَتِهِ",
+      "translit": "Subḥāna-lladhī yusabbiḥu-r-raʿdu bi-ḥamdihi wa-l-malāʾikatu min khīfatih",
+      "tr": {
+        "en": "Glory be to the One whom the thunder glorifies with His praise, and the angels too, in awe of Him."
+      },
+      "sources": [
+        {
+          "collection": "quran",
+          "number": "13:13",
+          "type": "quran",
+          "url": "https://quran.com/13/13",
+          "note": "﴿وَيُسَبِّحُ الرَّعْدُ بِحَمْدِهِ وَالْمَلَائِكَةُ مِنْ خِيفَتِهِ﴾"
+        },
+        {
+          "collection": "adab_mufrad",
+          "number": "723",
+          "numbering": "sunnah.com",
+          "narrator": "ʿAbdullāh ibn al-Zubayr",
+          "type": "mawquf",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Albani",
+              "note": "صحيح الإسناد موقوفًا"
+            }
+          ],
+          "url": "https://sunnah.com/adab:723"
+        }
+      ],
+      "explain": {
+        "ar": "هذا ليس حديثًا عن النبي ﷺ، بل ذكرٌ مأخوذ من قوله تعالى: ﴿وَيُسَبِّحُ الرَّعْدُ بِحَمْدِهِ وَالْمَلَائِكَةُ مِنْ خِيفَتِهِ﴾، وكان عبد الله بن الزبير رضي الله عنهما يقوله إذا سمع الرعد ويترك الحديث. ورواه مالك في الموطأ من فعل ابنه عامر بن عبد الله بن الزبير.",
+        "en": "This is not a hadith of the Prophet ﷺ but a dhikr drawn from the verse “The thunder glorifies His praise, and so do the angels, in awe of Him” (13:13). ʿAbdullāh ibn al-Zubayr would stop talking and say it when he heard thunder; Mālik reports the same of his son ʿĀmir in the Muwaṭṭaʾ."
+      },
+      "newMuslim": {
+        "ar": "الرعد يذكّرنا بعظمة الله. توقّف لحظةً عن الكلام وقل هذا الذكر.",
+        "en": "Thunder reminds us of Allah's greatness. Pause your conversation for a moment and say this."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "ذكر-الرعد",
+      "en": "thunder-dhikr"
+    },
+    "template": "storm"
+  },
+  "keywords": {
+    "ar": [
+      "رعد",
+      "برق",
+      "عاصفة",
+      "دعاء الرعد"
+    ],
+    "en": [
+      "thunder",
+      "lightning",
+      "storm"
+    ]
+  },
+  "review": {
+    "status": "draft",
+    "notes": "للمراجع: يُرجى تأكيد رقم الأدب المفرد (723) وحكم الألباني عليه، وصحة نسبة أثر الموطأ إلى عامر بن عبد الله بن الزبير."
+  }
+}

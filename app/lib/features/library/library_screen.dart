@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../content/models.dart';
+import '../../content/ordering.dart';
 import '../../content/repository.dart';
 import '../../content/search.dart';
 import '../../l10n/app_localizations.dart';
@@ -30,7 +31,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
     final l = AppLocalizations.of(context);
     final lang = ref.watch(settingsProvider.select((s) => s.languageCode));
     final search = ref.watch(_searchProvider);
-    final results = search?.query(_query) ?? const <Moment>[];
+    final results = sortedMoments(search?.query(_query) ?? const <Moment>[]);
 
     return Scaffold(
       appBar: AppBar(title: Text(l.tabLibrary)),

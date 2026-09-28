@@ -1,0 +1,266 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "travel.traveler",
+  "rev": 1,
+  "category": "travel",
+  "trigger": {
+    "type": "travel",
+    "event": "TRAVELER"
+  },
+  "defaultOn": true,
+  "title": {
+    "ar": "أحكام المسافر: القصر والجمع",
+    "en": "The traveller: shortening and combining prayers"
+  },
+  "push": {
+    "title": {
+      "ar": "أنت الآن مسافر 🧳",
+      "en": "You are now travelling 🧳"
+    },
+    "body": {
+      "ar": "القصر «صدقةٌ تصدّق الله بها عليكم فاقبلوا صدقته» — الظهر والعصر والعشاء ركعتان.",
+      "en": "Shortening is “a charity Allah has given you, so accept it” — Dhuhr, Asr and Isha become two rak'ahs."
+    }
+  },
+  "items": [
+    {
+      "kind": "quran",
+      "ar": "وَإِذَا ضَرَبْتُمْ فِى ٱلْأَرْضِ فَلَيْسَ عَلَيْكُمْ جُنَاحٌ أَن تَقْصُرُوا۟ مِنَ ٱلصَّلَوٰةِ إِنْ خِفْتُمْ أَن يَفْتِنَكُمُ ٱلَّذِينَ كَفَرُوٓا۟ ۚ إِنَّ ٱلْكَٰفِرِينَ كَانُوا۟ لَكُمْ عَدُوًّۭا مُّبِينًۭا",
+      "tr": {
+        "en": "When you journey through the land, you are not to blame for shortening the prayer if you fear that the disbelievers may attack you; the disbelievers are an open enemy to you."
+      },
+      "sources": [
+        {
+          "collection": "quran",
+          "number": "4:101",
+          "type": "quran",
+          "url": "https://quran.com/4/101"
+        }
+      ],
+      "explain": {
+        "ar": "ذُكر الخوف في الآية، لكن النبي ﷺ بيّن أن القصر رخصةٌ للمسافر في الأمن أيضًا، كما في الحديث التالي.",
+        "en": "The verse mentions fear, but the Prophet ﷺ made clear that shortening is a concession for travellers even in safety, as the next hadith shows."
+      },
+      "newMuslim": {
+        "ar": "المسافر يصلّي الظهر والعصر والعشاء ركعتين بدل أربع. أما المغرب فثلاث، والفجر ركعتان كما هما.",
+        "en": "A traveller prays Dhuhr, Asr and Isha as two rak'ahs instead of four. Maghrib stays three and Fajr stays two."
+      }
+    },
+    {
+      "kind": "practice",
+      "ar": "قصر الصلاة الرباعية (الظهر والعصر والعشاء) إلى ركعتين في السفر.",
+      "quote": "صَدَقَةٌ تَصَدَّقَ اللَّهُ بِهَا عَلَيْكُمْ فَاقْبَلُوا صَدَقَتَهُ",
+      "tr": {
+        "en": "Shortening the four-rak'ah prayers (Dhuhr, Asr, Isha) to two while travelling."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "686",
+          "numbering": "abdul_baqi",
+          "narrator": "Yaʿlā ibn Umayyah, from ʿUmar ibn al-Khaṭṭāb",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:686a"
+        }
+      ],
+      "explain": {
+        "ar": "سأل يعلى بن أمية عمرَ رضي الله عنه: كيف نقصر وقد أمن الناس؟ فقال: عجبتُ مما عجبتَ منه، فسألتُ رسول الله ﷺ فقال: «صدقةٌ تصدّق الله بها عليكم، فاقبلوا صدقته».",
+        "en": "Yaʿlā ibn Umayyah asked ʿUmar how people could still shorten now that they were safe. ʿUmar said he had wondered the same and asked the Prophet ﷺ, who said: “It is a charity Allah has given you, so accept His charity.”"
+      },
+      "newMuslim": {
+        "ar": "القصر هديّةٌ من الله للمسافر، فلا تتردّد في أخذها.",
+        "en": "Shortening is Allah's gift to the traveller — accept it without hesitation."
+      }
+    },
+    {
+      "kind": "practice",
+      "ar": "الجمع بين الظهر والعصر، وبين المغرب والعشاء، عند الحاجة في السفر.",
+      "quote": "كَانَ رَسُولُ اللَّهِ ﷺ يَجْمَعُ بَيْنَ صَلَاةِ الظُّهْرِ وَالْعَصْرِ إِذَا كَانَ عَلَى ظَهْرِ سَيْرٍ، وَيَجْمَعُ بَيْنَ الْمَغْرِبِ وَالْعِشَاءِ",
+      "tr": {
+        "en": "Combining Dhuhr with Asr, and Maghrib with Isha, when needed on a journey."
+      },
+      "sources": [
+        {
+          "collection": "bukhari",
+          "number": "1107",
+          "numbering": "fath_al_bari",
+          "narrator": "ʿAbdullāh ibn ʿAbbās",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:1107"
+        }
+      ],
+      "explain": {
+        "ar": "«على ظهر سير» أي: وهو سائرٌ في طريقه. والجمع جائزٌ تقديمًا (في وقت الأولى) أو تأخيرًا (في وقت الثانية) عند من يقول به.",
+        "en": "“While on the move” means while travelling on the road. Those who allow combining allow it early (in the first prayer's time) or late (in the second's)."
+      },
+      "newMuslim": {
+        "ar": "لا تُجمع صلاة الفجر مع غيرها، ولا العصر مع المغرب.",
+        "en": "Fajr is never combined with another prayer, and neither is Asr with Maghrib."
+      }
+    },
+    {
+      "kind": "practice",
+      "ar": "اغتنم سفرك بالدعاء؛ فدعوة المسافر مستجابة.",
+      "quote": "ثَلَاثُ دَعَوَاتٍ مُسْتَجَابَاتٌ لَا شَكَّ فِيهِنَّ: دَعْوَةُ الْوَالِدِ، وَدَعْوَةُ الْمُسَافِرِ، وَدَعْوَةُ الْمَظْلُومِ",
+      "tr": {
+        "en": "Make the most of your journey with du'a — the traveller's supplication is answered."
+      },
+      "sources": [
+        {
+          "collection": "abudawud",
+          "number": "1536",
+          "numbering": "sunnah.com",
+          "narrator": "Abū Hurayrah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "hasan",
+              "by": "al-Albani"
+            },
+            {
+              "grade": "hasan_li_ghayrihi",
+              "by": "Shuaib al-Arnaut"
+            }
+          ],
+          "url": "https://sunnah.com/abudawud:1536"
+        }
+      ],
+      "explain": {
+        "ar": "ذكر النبي ﷺ دعوة المسافر من الدعوات المستجابة، فأكثِر في طريقك من الدعاء لنفسك ولأهلك وللمسلمين.",
+        "en": "The Prophet ﷺ counted the traveller's supplication among those that are answered, so make plenty of du'a on the road for yourself, your family and all Muslims."
+      },
+      "newMuslim": {
+        "ar": "ادعُ الله بلغتك وبما في قلبك، في السيارة أو الطائرة.",
+        "en": "Ask Allah in your own language and words — in the car or on the plane."
+      }
+    },
+    {
+      "kind": "dua",
+      "ar": "أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
+      "translit": "Aʿūdhu bi-kalimāti-llāhi-t-tāmmāti min sharri mā khalaq",
+      "tr": {
+        "en": "I seek refuge in the perfect words of Allah from the evil of what He has created."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "2708",
+          "numbering": "abdul_baqi",
+          "narrator": "Khawlah bint Ḥakīm",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:2708a"
+        }
+      ],
+      "explain": {
+        "ar": "«من نزل منزلًا ثم قال: أعوذ بكلمات الله التامّات من شرّ ما خلق، لم يضرّه شيءٌ حتى يرتحل من منزله ذلك». قله إذا وصلت إلى الفندق أو البيت الذي تنزل فيه.",
+        "en": "“Whoever stops at a place and says ‘I seek refuge in the perfect words of Allah from the evil of what He has created’, nothing will harm him until he leaves that place.” Say it when you reach your hotel or where you are staying."
+      },
+      "newMuslim": {
+        "ar": "دعاء قصير للحماية، قله عند كل مكانٍ تنزل فيه.",
+        "en": "A short du'a of protection — say it wherever you stop to stay."
+      }
+    }
+  ],
+  "fiqh": [
+    {
+      "topic": {
+        "ar": "مسافة القصر ومتى تبدأ",
+        "en": "The distance, and when the concession starts"
+      },
+      "majority": {
+        "ar": "نحو 80 كيلومترًا (أربعة بُرُد)، وتبدأ الرخصة بمفارقة عمران البلد لمن نوى سفرًا بهذه المسافة. ويستعمل «حِين» المسافة التي تختارها في الإعدادات.",
+        "en": "About 80 km (four barīds); the concession begins once you leave the built-up area of your town, if you intend a journey of that distance. Heen uses the distance you choose in Settings."
+      },
+      "differences": [
+        {
+          "madhhab": "hanafi",
+          "text": {
+            "ar": "مسيرة ثلاثة أيام، وتُقدَّر بنحو 77–89 كيلومترًا بحسب التقديرات المعاصرة.",
+            "en": "Three days' travel, estimated today at roughly 77–89 km."
+          }
+        }
+      ]
+    },
+    {
+      "topic": {
+        "ar": "حكم القصر",
+        "en": "Is shortening required?"
+      },
+      "majority": {
+        "ar": "القصر سنّةٌ مؤكدة أو رخصةٌ الأفضل فعلها (المالكية والشافعية والحنابلة).",
+        "en": "Shortening is an emphasised Sunnah, or a concession best taken (Mālikī, Shāfiʿī and Ḥanbalī)."
+      },
+      "differences": [
+        {
+          "madhhab": "hanafi",
+          "text": {
+            "ar": "القصر واجب؛ فلا يصلّي المسافر الرباعية أربعًا.",
+            "en": "Shortening is obligatory; a traveller does not pray the four-rak'ah prayers in full."
+          }
+        }
+      ]
+    },
+    {
+      "topic": {
+        "ar": "الجمع في السفر",
+        "en": "Combining prayers while travelling"
+      },
+      "majority": {
+        "ar": "يجوز الجمع للمسافر بين الظهر والعصر، وبين المغرب والعشاء (المالكية والشافعية والحنابلة).",
+        "en": "A traveller may combine Dhuhr with Asr and Maghrib with Isha (Mālikī, Shāfiʿī and Ḥanbalī)."
+      },
+      "differences": [
+        {
+          "madhhab": "hanafi",
+          "text": {
+            "ar": "لا جمع إلا في عرفة ومزدلفة للحاج؛ وما عدا ذلك «جمعٌ صوري»: تُؤخَّر الأولى إلى آخر وقتها وتُقدَّم الثانية في أول وقتها.",
+            "en": "No combining except at Arafah and Muzdalifah on Hajj; otherwise only “apparent combining” — praying the first at the end of its time and the second at the start of its own."
+          }
+        }
+      ]
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "قصر-الصلاة-للمسافر",
+      "en": "shortening-prayer-travel"
+    },
+    "template": "travel"
+  },
+  "keywords": {
+    "ar": [
+      "قصر",
+      "جمع",
+      "صلاة المسافر",
+      "سفر",
+      "مسافة القصر"
+    ],
+    "en": [
+      "qasr",
+      "shortening prayer",
+      "combining prayers",
+      "traveller"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

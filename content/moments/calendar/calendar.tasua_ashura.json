@@ -1,0 +1,115 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "calendar.tasua_ashura",
+  "rev": 1,
+  "category": "calendar",
+  "trigger": {
+    "type": "hijri",
+    "rule": "TASUA_ASHURA"
+  },
+  "defaultOn": true,
+  "title": {
+    "ar": "تاسوعاء وعاشوراء",
+    "en": "Tasu'a and Ashura"
+  },
+  "push": {
+    "title": {
+      "ar": "يوم عاشوراء قريب 🤍",
+      "en": "Ashura is near 🤍"
+    },
+    "body": {
+      "ar": "صيام عاشوراء يكفّر السنة الماضية، ويُسنّ صيام التاسع معه.",
+      "en": "Fasting Ashura expiates the past year, and fasting the 9th with it is Sunnah."
+    }
+  },
+  "items": [
+    {
+      "kind": "practice",
+      "ar": "صيام يوم عاشوراء، العاشر من شهر محرّم.",
+      "quote": "وَصِيَامُ يَوْمِ عَاشُورَاءَ أَحْتَسِبُ عَلَى اللَّهِ أَنْ يُكَفِّرَ السَّنَةَ الَّتِي قَبْلَهُ",
+      "tr": {
+        "en": "Fasting the day of Ashura, the 10th of Muharram."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "1162",
+          "numbering": "abdul_baqi",
+          "narrator": "Abū Qatādah al-Anṣārī",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:1162a"
+        }
+      ],
+      "explain": {
+        "ar": "صيام عاشوراء يكفّر ذنوب السنة التي قبله، وكان النبي ﷺ يصومه ويأمر بصيامه.",
+        "en": "Fasting Ashura expiates the sins of the year before it; the Prophet ﷺ fasted it and told others to fast it."
+      },
+      "newMuslim": {
+        "ar": "صيام تطوّع ليوم واحد، ويحسن أن تصوم معه اليوم التاسع.",
+        "en": "A voluntary one-day fast; it is best to fast the 9th along with it."
+      }
+    },
+    {
+      "kind": "practice",
+      "ar": "صيام اليوم التاسع من محرّم (تاسوعاء) مع العاشر.",
+      "quote": "فَإِذَا كَانَ الْعَامُ الْمُقْبِلُ إِنْ شَاءَ اللَّهُ صُمْنَا الْيَوْمَ التَّاسِعَ",
+      "tr": {
+        "en": "Fasting the 9th of Muharram (Tasu'a) together with the 10th."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "1134",
+          "numbering": "abdul_baqi",
+          "narrator": "ʿAbdullāh ibn ʿAbbās",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:1134a"
+        }
+      ],
+      "explain": {
+        "ar": "لمّا قيل للنبي ﷺ إن اليهود والنصارى يعظّمون هذا اليوم، عزم على صيام التاسع معه، فتوفّي ﷺ قبل العام المقبل.",
+        "en": "When the Prophet ﷺ was told that Jews and Christians honour this day, he resolved to fast the 9th as well, but passed away before the next year came."
+      },
+      "newMuslim": {
+        "ar": "صُم التاسع والعاشر معًا إن استطعت.",
+        "en": "Fast the 9th and the 10th together if you can."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "صيام-عاشوراء",
+      "en": "ashura-fasting"
+    },
+    "template": "calendar"
+  },
+  "keywords": {
+    "ar": [
+      "عاشوراء",
+      "تاسوعاء",
+      "محرم",
+      "صيام"
+    ],
+    "en": [
+      "ashura",
+      "tasua",
+      "muharram",
+      "fasting"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

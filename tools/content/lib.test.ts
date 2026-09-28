@@ -47,7 +47,10 @@ test("rejects a hadith source with no grading", () => {
 });
 
 test("rejects a weak du'a unless it is explicitly labelled", () => {
-  const weak = (m: Moment) => (source(m).grades = [{ grade: "daif", by: "x" }]);
+  // Every source must be weak: one sahih source is enough to keep an item.
+  const weak = (m: Moment) => {
+    for (const s of item(m).sources as Moment[]) s.grades = [{ grade: "daif", by: "al-Albani" }];
+  };
   assert.ok(errorsFor(weak).some((e) => e.includes("da'if")));
   assert.deepEqual(
     errorsFor((m) => {
@@ -71,6 +74,11 @@ test("an approval is invalidated by any later edit", () => {
 test("release mode refuses drafts", () => {
   const errors = errorsFor(() => {}, true);
   assert.ok(errors.some((e) => e.includes("only approved moments can ship")), errors.join("\n"));
+});
+
+test("rejects a narrator with no Arabic name in the glossary", () => {
+  const errors = errorsFor((m) => (source(m).narrator = "Nobody al-Unknown"));
+  assert.ok(errors.some((e) => e.includes("no Arabic name")), errors.join("\n"));
 });
 
 test("rejects over-long push text", () => {

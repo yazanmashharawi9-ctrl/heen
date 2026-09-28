@@ -38,6 +38,20 @@ void main() {
     expect(white.reviewStatus, isA<ReviewStatus>());
   });
 
+  test('every narrator and grader has an Arabic name', () {
+    for (final m in bundle.moments) {
+      final sources = [for (final i in m.items) ...i.sources, for (final f in m.fiqh) ...f.sources];
+      for (final s in sources) {
+        final names = [if (s.narrator != null) s.narrator!, for (final g in s.grades) g.by];
+        for (final n in names) {
+          expect(bundle.people[n], isNotNull, reason: '${m.id}: $n');
+        }
+      }
+    }
+    expect(bundle.person('Abū Hurayrah', 'ar'), 'أبو هريرة');
+    expect(bundle.person('Abū Hurayrah', 'en'), 'Abū Hurayrah');
+  });
+
   test('rejects an unknown bundle format', () {
     expect(
       () => parseBundle('{"format": 99, "release": false, "contentHash": "x", "moments": []}'),

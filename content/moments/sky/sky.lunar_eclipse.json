@@ -1,0 +1,142 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "sky.lunar_eclipse",
+  "rev": 1,
+  "category": "sky",
+  "trigger": {
+    "type": "eclipse",
+    "kind": "lunar"
+  },
+  "defaultOn": true,
+  "title": {
+    "ar": "خسوف القمر",
+    "en": "Lunar eclipse"
+  },
+  "push": {
+    "title": {
+      "ar": "خسوف القمر ظاهر في منطقتك الآن 🌕",
+      "en": "A lunar eclipse is visible where you are 🌕"
+    },
+    "body": {
+      "ar": "«إن الشمس والقمر آيتان من آيات الله… فإذا رأيتم ذلك فادعوا الله وكبّروا وصلّوا وتصدّقوا»",
+      "en": "“The sun and the moon are two of Allah's signs… when you see that, call upon Allah, say takbir, pray and give charity.”"
+    }
+  },
+  "items": [
+    {
+      "kind": "practice",
+      "ar": "عند خسوف القمر: الدعاء، والتكبير، والصلاة، والصدقة.",
+      "quote": "إِنَّ الشَّمْسَ وَالْقَمَرَ آيَتَانِ مِنْ آيَاتِ اللَّهِ، لَا يَنْخَسِفَانِ لِمَوْتِ أَحَدٍ وَلَا لِحَيَاتِهِ، فَإِذَا رَأَيْتُمْ ذَلِكَ فَادْعُوا اللَّهَ وَكَبِّرُوا، وَصَلُّوا وَتَصَدَّقُوا",
+      "tr": {
+        "en": "During a lunar eclipse: supplication, takbir, prayer and charity."
+      },
+      "sources": [
+        {
+          "collection": "bukhari",
+          "number": "1044",
+          "numbering": "fath_al_bari",
+          "narrator": "ʿĀʾishah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:1044"
+        }
+      ],
+      "explain": {
+        "ar": "ذكر النبي ﷺ الشمس والقمر معًا، فالمشروع عند خسوف القمر مثل المشروع عند كسوف الشمس: الدعاء والتكبير والصلاة والصدقة.",
+        "en": "The Prophet ﷺ mentioned the sun and the moon together, so what is prescribed for a lunar eclipse is the same as for a solar one: du'a, takbir, prayer and charity."
+      },
+      "newMuslim": {
+        "ar": "خسوف القمر يُرى بالعين بأمان، ويحدث ليلًا في وقت البدر.",
+        "en": "A lunar eclipse is safe to watch with the naked eye and happens at night around the full moon."
+      }
+    },
+    {
+      "kind": "info",
+      "ar": "صلاة الخسوف عند الجمهور كصلاة الكسوف: ركعتان، في كل ركعةٍ قيامان وركوعان، ثم سجدتان.",
+      "quote": "فَبَعَثَ مُنَادِيًا: «الصَّلَاةَ جَامِعَةً»، فَاجْتَمَعُوا، وَتَقَدَّمَ فَكَبَّرَ، وَصَلَّى أَرْبَعَ رَكَعَاتٍ فِي رَكْعَتَيْنِ وَأَرْبَعَ سَجَدَاتٍ",
+      "tr": {
+        "en": "According to most scholars, the lunar eclipse prayer is like the solar one: two rak'ahs, each with two standings and two bowings, then two prostrations."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "901",
+          "numbering": "abdul_baqi",
+          "narrator": "ʿĀʾishah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:901d",
+          "note": "في صفة صلاة كسوف الشمس"
+        }
+      ],
+      "explain": {
+        "ar": "الحديث في صفة صلاة كسوف الشمس، وقاس عليه الجمهورُ صلاةَ خسوف القمر. ووقتها من بدء الخسوف حتى ينجلي.",
+        "en": "The hadith describes the solar eclipse prayer; most scholars apply it to the lunar eclipse too. Its time lasts from the start of the eclipse until it clears."
+      },
+      "newMuslim": {
+        "ar": "خطوات الصلاة مشروحة في لحظة «كسوف الشمس» في المكتبة.",
+        "en": "The step-by-step guide is in the “Solar eclipse” moment in the Library."
+      }
+    }
+  ],
+  "fiqh": [
+    {
+      "topic": {
+        "ar": "صفة صلاة الخسوف",
+        "en": "How the lunar eclipse prayer is performed"
+      },
+      "majority": {
+        "ar": "كصلاة الكسوف: ركعتان في كل ركعةٍ ركوعان، وتُصلّى جماعة (الشافعية والحنابلة).",
+        "en": "Like the solar eclipse prayer: two rak'ahs with two bowings each, prayed in congregation (Shāfiʿī and Ḥanbalī)."
+      },
+      "differences": [
+        {
+          "madhhab": "hanafi",
+          "text": {
+            "ar": "تُصلّى ركعتين كسائر النوافل، فرادى في البيوت.",
+            "en": "Two rak'ahs like any voluntary prayer, prayed individually at home."
+          }
+        },
+        {
+          "madhhab": "maliki",
+          "text": {
+            "ar": "تُصلّى ركعتين كالنوافل بقيامٍ وركوعٍ واحد، فرادى في البيوت.",
+            "en": "Two rak'ahs like voluntary prayers with one standing and one bowing, prayed individually at home."
+          }
+        }
+      ]
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "صلاة-الخسوف",
+      "en": "lunar-eclipse-prayer"
+    },
+    "template": "eclipse"
+  },
+  "keywords": {
+    "ar": [
+      "خسوف",
+      "خسوف القمر",
+      "صلاة الخسوف"
+    ],
+    "en": [
+      "lunar eclipse",
+      "eclipse prayer",
+      "salat al khusuf"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

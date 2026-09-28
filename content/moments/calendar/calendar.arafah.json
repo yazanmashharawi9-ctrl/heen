@@ -1,0 +1,122 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "calendar.arafah",
+  "rev": 1,
+  "category": "calendar",
+  "trigger": {
+    "type": "hijri",
+    "rule": "ARAFAH"
+  },
+  "defaultOn": true,
+  "title": {
+    "ar": "يوم عرفة",
+    "en": "The Day of Arafah"
+  },
+  "push": {
+    "title": {
+      "ar": "غدًا يوم عرفة 🕋",
+      "en": "Tomorrow is the Day of Arafah 🕋"
+    },
+    "body": {
+      "ar": "صيامه يكفّر السنة الماضية والسنة القادمة. لا تفوّت هذا اليوم.",
+      "en": "Fasting it expiates the past year and the coming one. Don't let this day pass you by."
+    }
+  },
+  "items": [
+    {
+      "kind": "practice",
+      "ar": "صيام يوم عرفة، التاسع من ذي الحجة، لغير الحاجّ.",
+      "quote": "صِيَامُ يَوْمِ عَرَفَةَ أَحْتَسِبُ عَلَى اللَّهِ أَنْ يُكَفِّرَ السَّنَةَ الَّتِي قَبْلَهُ وَالسَّنَةَ الَّتِي بَعْدَهُ",
+      "tr": {
+        "en": "Fasting the Day of Arafah, the 9th of Dhul-Hijjah, for those not on Hajj."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "1162",
+          "numbering": "abdul_baqi",
+          "narrator": "Abū Qatādah al-Anṣārī",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:1162a"
+        }
+      ],
+      "explain": {
+        "ar": "يوم عرفة من أعظم أيام السنة، وصيامه لغير الحاجّ سببٌ لتكفير ذنوب سنتين. وأمّا الحاجّ الواقف بعرفة فلم يصمه النبي ﷺ في حجّته.",
+        "en": "Arafah is among the greatest days of the year; fasting it (for those not on Hajj) expiates two years of sins. The Prophet ﷺ himself did not fast it while standing at Arafah on Hajj."
+      },
+      "newMuslim": {
+        "ar": "إن لم تستطع الصيام فأكثر في هذا اليوم من الدعاء والذكر.",
+        "en": "If you can't fast, spend the day in plenty of du'a and dhikr."
+      }
+    }
+  ],
+  "fiqh": [
+    {
+      "topic": {
+        "ar": "صيام الحاجّ يوم عرفة",
+        "en": "Pilgrims fasting on Arafah"
+      },
+      "majority": {
+        "ar": "لا يُستحب للحاجّ الواقف بعرفة أن يصوم؛ لأن النبي ﷺ أفطر يومها في حجّته.",
+        "en": "It is not recommended for the pilgrim standing at Arafah to fast, since the Prophet ﷺ did not fast that day on his Hajj."
+      },
+      "sources": [
+        {
+          "collection": "bukhari",
+          "number": "1988",
+          "numbering": "fath_al_bari",
+          "narrator": "Umm al-Faḍl bint al-Ḥārith",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:1988",
+          "note": "أُرسل إليه قدحُ لبن وهو واقفٌ على بعيره بعرفة فشربه"
+        }
+      ]
+    },
+    {
+      "topic": {
+        "ar": "إذا اختلف تاريخ بلدك عن يوم الوقوف بعرفة",
+        "en": "When your country's date differs from the day of standing"
+      },
+      "majority": {
+        "ar": "اختلف العلماء المعاصرون: فمنهم من يرى صيامه مع يوم وقوف الحجاج بعرفة، ومنهم من يرى صيامه في التاسع من ذي الحجة بحسب تقويم بلدك. اسأل أهل العلم في بلدك.",
+        "en": "Contemporary scholars differ: some say fast on the day the pilgrims stand at Arafah, others say fast on the 9th of Dhul-Hijjah by your own country's calendar. Ask the scholars where you live."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "صيام-يوم-عرفة",
+      "en": "day-of-arafah"
+    },
+    "template": "calendar"
+  },
+  "keywords": {
+    "ar": [
+      "عرفة",
+      "يوم عرفة",
+      "ذو الحجة",
+      "صيام"
+    ],
+    "en": [
+      "arafah",
+      "arafat",
+      "dhul hijjah",
+      "fasting"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

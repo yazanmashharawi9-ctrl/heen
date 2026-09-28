@@ -11,7 +11,7 @@ import { readFileSync } from "node:fs";
 // (what Node's ESM interop and TypeScript's nodenext both agree on).
 import { Ajv2020, type ValidateFunction } from "ajv/dist/2020.js";
 import ajvFormats from "ajv-formats";
-import { SCHEMA_PATH, contentHash, loadMoments, type Json, type MomentFile } from "./lib.ts";
+import { SCHEMA_PATH, contentHash, loadMoments, loadPeople, type Json, type MomentFile } from "./lib.ts";
 
 const PUSH_TITLE_MAX = 65;
 const PUSH_BODY_MAX = 180;
@@ -37,11 +37,15 @@ const arr = (v: Json | undefined): Json[] => (Array.isArray(v) ? v : []);
 const str = (v: Json | undefined): string => (typeof v === "string" ? v : "");
 const length = (s: string): number => [...s].length;
 
-function checkSources(where: string, sources: Json[], errors: string[]): number {
+function checkSources(where: string, sources: Json[], errors: string[], people: Record<string, string>): number {
   let best = -1;
   for (const [i, s] of sources.entries()) {
     const source = obj(s);
     const grades = arr(source.grades);
+    const names = [str(source.narrator), ...grades.map((g) => str(obj(g).by))].filter(Boolean);
+    for (const name of names) {
+      if (!(name in people)) errors.push(`${where}.sources[${i}]: "${name}" has no Arabic name in content/glossary.json`);
+    }
     if (source.type === "quran") {
       best = Math.max(best, 5);
       continue;
@@ -69,7 +73,10 @@ export function validate({ release = false } = {}): Report {
   return validateMoments(loadMoments(), { release });
 }
 
-export function validateMoments(moments: MomentFile[], { release = false } = {}): Report {
+export function validateMoments(
+  moments: MomentFile[],
+  { release = false, people = loadPeople() }: { release?: boolean; people?: Record<string, string> } = {},
+): Report {
   const errors: string[] = [];
   const warnings: string[] = [];
   const check = schemaCheck();
@@ -125,14 +132,14 @@ export function validateMoments(moments: MomentFile[], { release = false } = {})
       }
       if (!item.newMuslim) warnings.push(`${where}: no newMuslim explanation`);
 
-      const best = checkSources(where, arr(item.sources), errors);
+      const best = checkSources(where, arr(item.sources), errors, people);
       if (best === GRADE_RANK.daif && item.showAsWeak !== true) {
         errors.push(`${where}: best grading is da'if — remove it or set showAsWeak so the UI labels it`);
       }
     }
 
     for (const [i, note] of arr(m.fiqh).entries()) {
-      checkSources(`${at}: fiqh[${i}]`, arr(obj(note).sources), errors);
+      checkSources(`${at}: fiqh[${i}]`, arr(obj(note).sources), errors, people);
     }
 
     const review = obj(m.review);

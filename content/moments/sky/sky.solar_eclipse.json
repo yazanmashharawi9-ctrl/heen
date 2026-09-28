@@ -1,0 +1,150 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "sky.solar_eclipse",
+  "rev": 1,
+  "category": "sky",
+  "trigger": {
+    "type": "eclipse",
+    "kind": "solar"
+  },
+  "defaultOn": true,
+  "title": {
+    "ar": "كسوف الشمس",
+    "en": "Solar eclipse"
+  },
+  "push": {
+    "title": {
+      "ar": "كسوف الشمس ظاهر في منطقتك الآن 🌘",
+      "en": "A solar eclipse is visible where you are 🌘"
+    },
+    "body": {
+      "ar": "«فإذا رأيتم ذلك فادعوا الله وكبّروا وصلّوا وتصدّقوا» — افتح لتعرف كيف تُصلّى صلاة الكسوف.",
+      "en": "“When you see that, call upon Allah, say takbir, pray and give charity.” Open to learn how the eclipse prayer is done."
+    }
+  },
+  "items": [
+    {
+      "kind": "practice",
+      "ar": "عند الكسوف: الدعاء، والتكبير، والصلاة، والصدقة.",
+      "quote": "إِنَّ الشَّمْسَ وَالْقَمَرَ آيَتَانِ مِنْ آيَاتِ اللَّهِ، لَا يَنْخَسِفَانِ لِمَوْتِ أَحَدٍ وَلَا لِحَيَاتِهِ، فَإِذَا رَأَيْتُمْ ذَلِكَ فَادْعُوا اللَّهَ وَكَبِّرُوا، وَصَلُّوا وَتَصَدَّقُوا",
+      "tr": {
+        "en": "During an eclipse: supplication, takbir, prayer and charity."
+      },
+      "sources": [
+        {
+          "collection": "bukhari",
+          "number": "1044",
+          "numbering": "fath_al_bari",
+          "narrator": "ʿĀʾishah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:1044"
+        },
+        {
+          "collection": "bukhari",
+          "number": "1043",
+          "numbering": "fath_al_bari",
+          "narrator": "al-Mughīrah ibn Shuʿbah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:1043",
+          "note": "كسفت الشمس يوم مات إبراهيم ابن النبي ﷺ، فقال الناس: كسفت لموته، فأنكر ذلك"
+        }
+      ],
+      "explain": {
+        "ar": "الكسوف آيةٌ من آيات الله، وليس لموت أحدٍ ولا لولادته: فقد كسفت الشمس يوم مات إبراهيم ابن النبي ﷺ فقال الناس: كسفت لموته، فأبطل النبي ﷺ ذلك، وأمر بالدعاء والتكبير والصلاة والصدقة.",
+        "en": "An eclipse is one of Allah's signs, not caused by anyone's death or birth. When the sun eclipsed on the day the Prophet's ﷺ son Ibrāhīm died, people said it was for his death; the Prophet ﷺ rejected that and commanded du'a, takbir, prayer and charity."
+      },
+      "newMuslim": {
+        "ar": "لا تنظر إلى الشمس مباشرةً أثناء الكسوف؛ فذلك يضرّ العينين. استعمل نظارات الكسوف الخاصة.",
+        "en": "Never look straight at the sun during an eclipse — it damages the eyes. Use proper eclipse glasses."
+      }
+    },
+    {
+      "kind": "info",
+      "ar": "صفة صلاة الكسوف: ركعتان، في كل ركعةٍ قيامان وركوعان، ثم سجدتان — فهي أربعة ركوعات وأربع سجدات، مع إطالة القراءة والركوع والسجود.",
+      "quote": "فَبَعَثَ مُنَادِيًا: «الصَّلَاةَ جَامِعَةً»، فَاجْتَمَعُوا، وَتَقَدَّمَ فَكَبَّرَ، وَصَلَّى أَرْبَعَ رَكَعَاتٍ فِي رَكْعَتَيْنِ وَأَرْبَعَ سَجَدَاتٍ",
+      "tr": {
+        "en": "How the eclipse prayer is done: two rak'ahs, each with two standings and two bowings, then two prostrations — four bowings and four prostrations in all, with long recitation, bowing and prostration."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "901",
+          "numbering": "abdul_baqi",
+          "narrator": "ʿĀʾishah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:901d"
+        }
+      ],
+      "explain": {
+        "ar": "تُصلّى جماعةً في المسجد ويُنادى لها «الصلاة جامعة»، أو منفردًا إن لم تتيسّر الجماعة، ووقتها من بدء الكسوف حتى ينجلي.",
+        "en": "It is prayed in congregation at the mosque with the call “aṣ-ṣalātu jāmiʿah”, or alone if that isn't possible; its time lasts from the start of the eclipse until it clears."
+      },
+      "newMuslim": {
+        "ar": "الخطوات: ١) كبّر، واقرأ الفاتحة وسورةً طويلة. ٢) اركع ركوعًا طويلًا. ٣) ارفع وقل «سمع الله لمن حمده، ربنا ولك الحمد»، ثم اقرأ الفاتحة وسورةً أقصر. ٤) اركع ثانيةً ثم ارفع. ٥) اسجد سجدتين. ثم الركعة الثانية بالطريقة نفسها، وتشهّد وسلّم.",
+        "en": "Steps: 1) Say takbir, recite al-Fātiḥah and a long surah. 2) Bow for a long time. 3) Rise saying “samiʿa-llāhu liman ḥamidah, rabbanā wa laka-l-ḥamd”, then recite al-Fātiḥah and a shorter surah. 4) Bow again, then rise. 5) Make two prostrations. Repeat for the second rak'ah, then tashahhud and salām."
+      }
+    }
+  ],
+  "fiqh": [
+    {
+      "topic": {
+        "ar": "صفة الصلاة بين المذاهب",
+        "en": "How the madhhabs describe the prayer"
+      },
+      "majority": {
+        "ar": "ركعتان، في كل ركعةٍ ركوعان (المالكية والشافعية والحنابلة).",
+        "en": "Two rak'ahs with two bowings in each (Mālikī, Shāfiʿī and Ḥanbalī)."
+      },
+      "differences": [
+        {
+          "madhhab": "hanafi",
+          "text": {
+            "ar": "تُصلّى ركعتين كسائر النوافل، في كل ركعةٍ ركوعٌ واحد.",
+            "en": "Two rak'ahs like any voluntary prayer, with one bowing in each."
+          }
+        }
+      ]
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "صلاة-الكسوف",
+      "en": "eclipse-prayer"
+    },
+    "template": "eclipse"
+  },
+  "keywords": {
+    "ar": [
+      "كسوف",
+      "كسوف الشمس",
+      "صلاة الكسوف",
+      "الصلاة جامعة"
+    ],
+    "en": [
+      "solar eclipse",
+      "eclipse prayer",
+      "salat al kusuf"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

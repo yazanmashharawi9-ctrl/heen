@@ -1,0 +1,82 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "calendar.ramadan_start",
+  "rev": 1,
+  "category": "calendar",
+  "trigger": {
+    "type": "hijri",
+    "rule": "RAMADAN_START"
+  },
+  "defaultOn": true,
+  "title": {
+    "ar": "دخول شهر رمضان",
+    "en": "Ramadan begins"
+  },
+  "push": {
+    "title": {
+      "ar": "رمضان مبارك 🌙",
+      "en": "Ramadan Mubarak 🌙"
+    },
+    "body": {
+      "ar": "من صام رمضان إيمانًا واحتسابًا غُفر له ما تقدّم من ذنبه.",
+      "en": "Whoever fasts Ramadan out of faith and hoping for reward, his past sins are forgiven."
+    }
+  },
+  "items": [
+    {
+      "kind": "practice",
+      "ar": "صيام رمضان إيمانًا واحتسابًا.",
+      "quote": "مَنْ صَامَ رَمَضَانَ إِيمَانًا وَاحْتِسَابًا غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ",
+      "tr": {
+        "en": "Fasting Ramadan out of faith and hoping for Allah's reward."
+      },
+      "sources": [
+        {
+          "collection": "bukhari",
+          "number": "38",
+          "numbering": "fath_al_bari",
+          "narrator": "Abū Hurayrah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:38"
+        }
+      ],
+      "explain": {
+        "ar": "«إيمانًا» أي: تصديقًا بأن الله فرضه، و«احتسابًا» أي: طلبًا للأجر من الله، لا رياءً ولا مجرّد عادة.",
+        "en": "“Out of faith” means believing Allah made it obligatory; “hoping for reward” means seeking reward from Allah, not showing off or mere habit."
+      },
+      "newMuslim": {
+        "ar": "صيام رمضان فرضٌ على كل مسلم بالغ عاقل قادر: الامتناع عن الطعام والشراب والجماع من الفجر إلى المغرب. والمريض والمسافر يفطران ويقضيان بعد رمضان.",
+        "en": "Fasting Ramadan is obligatory on every adult, sane Muslim who is able: no food, drink or intimacy from Fajr until Maghrib. The sick and travellers may break the fast and make it up after Ramadan."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "رمضان-مبارك",
+      "en": "ramadan-mubarak"
+    },
+    "template": "crescent"
+  },
+  "keywords": {
+    "ar": [
+      "رمضان",
+      "صيام",
+      "هلال رمضان",
+      "رمضان مبارك"
+    ],
+    "en": [
+      "ramadan",
+      "fasting",
+      "sawm"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

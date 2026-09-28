@@ -1,0 +1,147 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "place.mosque",
+  "rev": 1,
+  "category": "place",
+  "trigger": {
+    "type": "place",
+    "kind": "mosque"
+  },
+  "defaultOn": false,
+  "title": {
+    "ar": "عند دخول المسجد",
+    "en": "Entering the mosque"
+  },
+  "push": {
+    "title": {
+      "ar": "وصلت إلى المسجد 🕌",
+      "en": "You've arrived at the mosque 🕌"
+    },
+    "body": {
+      "ar": "قل: «اللهم افتح لي أبواب رحمتك»، وصلِّ ركعتين قبل أن تجلس. ولا تنسَ إسكات الجوّال.",
+      "en": "Say “O Allah, open for me the doors of Your mercy”, and pray two rak'ahs before sitting. Silence your phone."
+    }
+  },
+  "items": [
+    {
+      "kind": "dua",
+      "ar": "اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
+      "translit": "Allāhumma-ftaḥ lī abwāba raḥmatik",
+      "tr": {
+        "en": "O Allah, open for me the doors of Your mercy."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "713",
+          "numbering": "abdul_baqi",
+          "narrator": "Abū Ḥumayd or Abū Usayd",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:713a"
+        }
+      ],
+      "explain": {
+        "ar": "علّمنا النبي ﷺ أن يقول الداخل إلى المسجد: «اللهم افتح لي أبواب رحمتك».",
+        "en": "The Prophet ﷺ taught that whoever enters the mosque should say: “O Allah, open for me the doors of Your mercy.”"
+      },
+      "newMuslim": {
+        "ar": "ادخل بقدمك اليمنى، وقل هذا الدعاء.",
+        "en": "Step in with your right foot and say this du'a."
+      }
+    },
+    {
+      "kind": "dua",
+      "ar": "اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ",
+      "translit": "Allāhumma innī asʾaluka min faḍlik",
+      "tr": {
+        "en": "O Allah, I ask You of Your bounty."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "713",
+          "numbering": "abdul_baqi",
+          "narrator": "Abū Ḥumayd or Abū Usayd",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:713a"
+        }
+      ],
+      "explain": {
+        "ar": "ويقول الخارج من المسجد: «اللهم إني أسألك من فضلك».",
+        "en": "And on leaving the mosque: “O Allah, I ask You of Your bounty.”"
+      },
+      "newMuslim": {
+        "ar": "قله وأنت تخرج من المسجد.",
+        "en": "Say it as you leave the mosque."
+      }
+    },
+    {
+      "kind": "practice",
+      "ar": "صلاة ركعتين (تحية المسجد) قبل الجلوس.",
+      "quote": "إِذَا دَخَلَ أَحَدُكُمُ الْمَسْجِدَ فَلْيَرْكَعْ رَكْعَتَيْنِ قَبْلَ أَنْ يَجْلِسَ",
+      "tr": {
+        "en": "Praying two rak'ahs (greeting the mosque) before sitting down."
+      },
+      "sources": [
+        {
+          "collection": "bukhari",
+          "number": "444",
+          "numbering": "fath_al_bari",
+          "narrator": "Abū Qatādah al-Salamī",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:444"
+        }
+      ],
+      "explain": {
+        "ar": "تُسمّى «تحية المسجد»: ركعتان يصلّيهما الداخل قبل أن يجلس.",
+        "en": "Called “greeting the mosque”: two rak'ahs prayed on entering, before sitting."
+      },
+      "newMuslim": {
+        "ar": "ركعتان عاديتان بنيّة تحية المسجد. وإن دخلتَ والصلاة قائمة فادخل مع الجماعة.",
+        "en": "Two ordinary rak'ahs with the intention of greeting the mosque. If the congregational prayer has started, just join it."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "دعاء-دخول-المسجد",
+      "en": "entering-mosque-dua"
+    },
+    "template": "mosque"
+  },
+  "keywords": {
+    "ar": [
+      "مسجد",
+      "دعاء دخول المسجد",
+      "تحية المسجد",
+      "دعاء الخروج من المسجد"
+    ],
+    "en": [
+      "mosque",
+      "masjid",
+      "entering mosque",
+      "tahiyyat al masjid"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

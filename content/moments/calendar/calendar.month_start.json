@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/moment.schema.json",
   "id": "calendar.month_start",
-  "rev": 1,
+  "rev": 2,
   "category": "calendar",
   "trigger": {
     "type": "hijri",
@@ -42,6 +42,14 @@
               "grade": "hasan",
               "by": "al-Tirmidhi",
               "note": "قال الترمذي: حسن غريب"
+            },
+            {
+              "grade": "sahih",
+              "by": "al-Albani"
+            },
+            {
+              "grade": "sahih",
+              "by": "Ahmad Shakir"
             }
           ],
           "url": "https://sunnah.com/tirmidhi:3451"

@@ -1,0 +1,128 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "calendar.short_fasting_days",
+  "rev": 1,
+  "category": "calendar",
+  "trigger": {
+    "type": "fastLength"
+  },
+  "defaultOn": false,
+  "title": {
+    "ar": "أيام الشتاء القصيرة",
+    "en": "The short winter days"
+  },
+  "push": {
+    "title": {
+      "ar": "غدًا من أقصر أيام السنة ❄️",
+      "en": "Tomorrow is one of the year's shortest days ❄️"
+    },
+    "body": {
+      "ar": "الصيام الآن أخفّ ما يكون في السنة: اقضِ ما فاتك من رمضان، أو صم تطوّعًا.",
+      "en": "Fasting is at its lightest now: make up missed Ramadan days, or fast voluntarily."
+    }
+  },
+  "items": [
+    {
+      "kind": "practice",
+      "ar": "اغتنام أيام الشتاء القصيرة للصيام، قضاءً أو تطوّعًا.",
+      "quote": "مَنْ صَامَ يَوْمًا فِي سَبِيلِ اللَّهِ بَعَّدَ اللَّهُ وَجْهَهُ عَنِ النَّارِ سَبْعِينَ خَرِيفًا",
+      "tr": {
+        "en": "Making the most of the short winter days to fast, to make up days or voluntarily."
+      },
+      "sources": [
+        {
+          "collection": "bukhari",
+          "number": "2840",
+          "numbering": "fath_al_bari",
+          "narrator": "Abū Saʿīd al-Khudrī",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:2840"
+        },
+        {
+          "collection": "muslim",
+          "number": "1153",
+          "numbering": "abdul_baqi",
+          "narrator": "Abū Saʿīd al-Khudrī",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:1153a"
+        }
+      ],
+      "explain": {
+        "ar": "في الحديث فضلٌ عظيم للصيام. وقيل في «سبيل الله»: الصيام في الجهاد، وقيل: الصيام خالصًا لله. وأيام الشتاء القصيرة فرصةٌ يخفّ فيها الصيام على النفس.",
+        "en": "The hadith shows the great virtue of fasting. Scholars differ on “in the path of Allah”: fasting while on campaign, or fasting purely for Allah. Short winter days make fasting easier on the soul."
+      },
+      "newMuslim": {
+        "ar": "إن كان عليك أيامٌ من رمضان، فهذا أسهل وقتٍ لقضائها.",
+        "en": "If you owe days from Ramadan, this is the easiest time to make them up."
+      }
+    },
+    {
+      "kind": "practice",
+      "ar": "قضاء ما فاتك من رمضان قبل أن يأتي رمضان القادم.",
+      "quote": "كَانَ يَكُونُ عَلَيَّ الصَّوْمُ مِنْ رَمَضَانَ، فَمَا أَسْتَطِيعُ أَنْ أَقْضِيَ إِلَّا فِي شَعْبَانَ",
+      "tr": {
+        "en": "Making up missed Ramadan days before the next Ramadan arrives."
+      },
+      "sources": [
+        {
+          "collection": "bukhari",
+          "number": "1950",
+          "numbering": "fath_al_bari",
+          "narrator": "ʿĀʾishah",
+          "type": "mawquf",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:1950"
+        }
+      ],
+      "explain": {
+        "ar": "كانت عائشة رضي الله عنها تؤخّر قضاء رمضان إلى شعبان لانشغالها بالنبي ﷺ؛ فوقت القضاء واسعٌ إلى رمضان التالي، والمبادرة به في أيام الشتاء القصيرة أيسر.",
+        "en": "ʿĀʾishah would delay her make-up fasts until Shaʿbān because she was busy serving the Prophet ﷺ; so there is time until the next Ramadan, and short winter days make it easier to get it done."
+      },
+      "newMuslim": {
+        "ar": "القضاء يومٌ مكان يوم، بنفس طريقة صيام رمضان.",
+        "en": "Making up is one day for each missed day, fasted just like a Ramadan day."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "صيام-أيام-الشتاء",
+      "en": "winter-fasting"
+    },
+    "template": "cold"
+  },
+  "keywords": {
+    "ar": [
+      "صيام الشتاء",
+      "قضاء رمضان",
+      "صيام التطوع",
+      "نهار قصير"
+    ],
+    "en": [
+      "winter fasting",
+      "make up fasts",
+      "qada",
+      "short days"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

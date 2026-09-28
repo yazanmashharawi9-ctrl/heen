@@ -1,0 +1,97 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "place.cemetery",
+  "rev": 1,
+  "category": "place",
+  "trigger": {
+    "type": "place",
+    "kind": "cemetery"
+  },
+  "defaultOn": false,
+  "title": {
+    "ar": "عند المرور بالمقابر",
+    "en": "Passing by a graveyard"
+  },
+  "push": {
+    "title": {
+      "ar": "تمرّ بمقبرة",
+      "en": "You're passing a graveyard"
+    },
+    "body": {
+      "ar": "سلِّم على أهلها: «السلام عليكم أهل الديار من المؤمنين والمسلمين…»",
+      "en": "Greet its people: “Peace be upon you, O believing dwellers of these abodes…”"
+    }
+  },
+  "items": [
+    {
+      "kind": "dua",
+      "ar": "السَّلَامُ عَلَيْكُمْ أَهْلَ الدِّيَارِ مِنَ الْمُؤْمِنِينَ وَالْمُسْلِمِينَ، وَإِنَّا إِنْ شَاءَ اللَّهُ لَلَاحِقُونَ، أَسْأَلُ اللَّهَ لَنَا وَلَكُمُ الْعَافِيَةَ",
+      "translit": "As-salāmu ʿalaykum ahla-d-diyāri mina-l-muʾminīna wa-l-muslimīn, wa innā in shāʾa-llāhu la-lāḥiqūn, asʾalu-llāha lanā wa lakumu-l-ʿāfiyah",
+      "tr": {
+        "en": "Peace be upon you, O believing and Muslim dwellers of these abodes. We will, if Allah wills, join you. I ask Allah for well-being for us and for you."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "975",
+          "numbering": "abdul_baqi",
+          "narrator": "Buraydah ibn al-Ḥuṣayb",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:975"
+        },
+        {
+          "collection": "muslim",
+          "number": "976",
+          "numbering": "abdul_baqi",
+          "narrator": "Abū Hurayrah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:976b",
+          "note": "«فزوروا القبور فإنها تذكّر الموت»"
+        }
+      ],
+      "explain": {
+        "ar": "كان النبي ﷺ يعلّم أصحابه إذا خرجوا إلى المقابر أن يقولوا هذا. وقال: «فزوروا القبور فإنها تذكّر الموت».",
+        "en": "The Prophet ﷺ taught his companions to say this when they went out to the graves, and he said: “Visit the graves, for they remind you of death.”"
+      },
+      "newMuslim": {
+        "ar": "زيارة القبور مشروعةٌ للتذكّر والدعاء للأموات، لا لطلب شيءٍ منهم.",
+        "en": "Visiting graves is for remembrance and praying for the dead — never for asking anything of them."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "دعاء-زيارة-القبور",
+      "en": "graveyard-dua"
+    },
+    "template": "cemetery"
+  },
+  "keywords": {
+    "ar": [
+      "مقبرة",
+      "زيارة القبور",
+      "السلام على أهل القبور",
+      "الموت"
+    ],
+    "en": [
+      "graveyard",
+      "cemetery",
+      "visiting graves"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "calendar.friday_hour",
+  "rev": 1,
+  "category": "calendar",
+  "trigger": {
+    "type": "weekday",
+    "days": [
+      5
+    ],
+    "at": "LAST_HOUR_BEFORE_MAGHRIB"
+  },
+  "defaultOn": true,
+  "title": {
+    "ar": "ساعة الإجابة يوم الجمعة",
+    "en": "The hour of response on Friday"
+  },
+  "push": {
+    "title": {
+      "ar": "آخر ساعة من يوم الجمعة 🤲",
+      "en": "The last hour of Friday 🤲"
+    },
+    "body": {
+      "ar": "فيها ساعة لا يسأل المسلم الله فيها شيئًا إلا أعطاه — فالتمسوها آخر ساعة بعد العصر.",
+      "en": "There is an hour when a Muslim asks Allah for nothing but He grants it — seek it in the last hour after Asr."
+    }
+  },
+  "items": [
+    {
+      "kind": "practice",
+      "ar": "الإكثار من الدعاء في آخر ساعة من يوم الجمعة، قبل غروب الشمس.",
+      "quote": "يَوْمُ الْجُمُعَةِ ثِنْتَا عَشْرَةَ -يُرِيدُ سَاعَةً- لَا يُوجَدُ مُسْلِمٌ يَسْأَلُ اللَّهَ عَزَّ وَجَلَّ شَيْئًا إِلَّا آتَاهُ اللَّهُ عَزَّ وَجَلَّ، فَالْتَمِسُوهَا آخِرَ سَاعَةٍ بَعْدَ الْعَصْرِ",
+      "tr": {
+        "en": "Making plenty of du'a in the last hour of Friday, before sunset."
+      },
+      "sources": [
+        {
+          "collection": "abudawud",
+          "number": "1048",
+          "numbering": "sunnah.com",
+          "narrator": "Jābir ibn ʿAbdillāh",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Albani"
+            }
+          ],
+          "url": "https://sunnah.com/abudawud:1048"
+        },
+        {
+          "collection": "bukhari",
+          "number": "935",
+          "numbering": "fath_al_bari",
+          "narrator": "Abū Hurayrah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:935",
+          "note": "«فيه ساعةٌ لا يوافقها عبدٌ مسلمٌ وهو قائمٌ يصلي يسأل الله تعالى شيئًا إلا أعطاه إياه»"
+        }
+      ],
+      "explain": {
+        "ar": "اختلف العلماء في تحديد هذه الساعة، ومن أرجح الأقوال أنها آخر ساعةٍ بعد العصر، كما في حديث جابر رضي الله عنه.",
+        "en": "Scholars differ on exactly when this hour is; one of the strongest views is the last hour after Asr, as in the hadith of Jābir."
+      },
+      "newMuslim": {
+        "ar": "ادعُ الله بما تحب من خير الدنيا والآخرة، بلغتك وبكلماتك.",
+        "en": "Ask Allah for whatever good you wish in this life and the next — in your own language and words."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "ساعة-الجمعة",
+      "en": "friday-hour"
+    },
+    "template": "calendar"
+  },
+  "keywords": {
+    "ar": [
+      "الجمعة",
+      "ساعة الإجابة",
+      "دعاء",
+      "بعد العصر"
+    ],
+    "en": [
+      "friday",
+      "jumuah",
+      "hour of response",
+      "dua"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

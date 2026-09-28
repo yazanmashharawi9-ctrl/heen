@@ -1,0 +1,118 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "weather.wind_strong",
+  "rev": 1,
+  "category": "weather",
+  "trigger": {
+    "type": "weather",
+    "event": "WIND_STRONG"
+  },
+  "defaultOn": false,
+  "title": {
+    "ar": "عند هبوب الريح الشديدة",
+    "en": "When a strong wind blows"
+  },
+  "push": {
+    "title": {
+      "ar": "رياح شديدة حولك 🌬️",
+      "en": "Strong wind around you 🌬️"
+    },
+    "body": {
+      "ar": "كان النبي ﷺ إذا عصفت الريح قال: «اللهم إني أسألك خيرها وخير ما فيها وخير ما أُرسلت به…»",
+      "en": "When the wind blew hard, the Prophet ﷺ asked Allah for its good and sought refuge from its harm."
+    }
+  },
+  "items": [
+    {
+      "kind": "dua",
+      "ar": "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَهَا، وَخَيْرَ مَا فِيهَا، وَخَيْرَ مَا أُرْسِلَتْ بِهِ، وَأَعُوذُ بِكَ مِنْ شَرِّهَا، وَشَرِّ مَا فِيهَا، وَشَرِّ مَا أُرْسِلَتْ بِهِ",
+      "translit": "Allāhumma innī asʾaluka khayrahā, wa khayra mā fīhā, wa khayra mā ursilat bih, wa aʿūdhu bika min sharrihā, wa sharri mā fīhā, wa sharri mā ursilat bih",
+      "tr": {
+        "en": "O Allah, I ask You for its good, the good within it and the good it was sent with; and I seek refuge in You from its evil, the evil within it and the evil it was sent with."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "899",
+          "numbering": "abdul_baqi",
+          "narrator": "ʿĀʾishah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:899b"
+        }
+      ],
+      "explain": {
+        "ar": "كان النبي ﷺ إذا اشتدّت الريح أو رأى الغيم تغيّر وجهه، خشيةَ أن يكون عذابًا، فإذا نزل المطر سُرّ به. والدعاء يجمع سؤال الخير والاستعاذة من الشر.",
+        "en": "When the wind grew strong or clouds gathered, the Prophet's ﷺ face would change, fearing it might be a punishment; when rain came he was relieved. The du'a asks for the good and seeks refuge from the harm."
+      },
+      "newMuslim": {
+        "ar": "الريح من خلق الله ومأمورة بأمره؛ فاسأل الله خيرها واستعذ به من شرّها.",
+        "en": "Wind is created and directed by Allah; ask Him for its good and seek refuge from its harm."
+      }
+    },
+    {
+      "kind": "practice",
+      "ar": "لا تسبّ الريح ولا تلعنها؛ فإذا رأيت منها ما تكره فاسأل الله خيرها.",
+      "quote": "لَا تَسُبُّوا الرِّيحَ، فَإِذَا رَأَيْتُمْ مَا تَكْرَهُونَ فَقُولُوا: اللَّهُمَّ إِنَّا نَسْأَلُكَ مِنْ خَيْرِ هَذِهِ الرِّيحِ وَخَيْرِ مَا فِيهَا وَخَيْرِ مَا أُمِرَتْ بِهِ، وَنَعُوذُ بِكَ مِنْ شَرِّ هَذِهِ الرِّيحِ وَشَرِّ مَا فِيهَا وَشَرِّ مَا أُمِرَتْ بِهِ",
+      "tr": {
+        "en": "Don't curse the wind; if you see something you dislike, ask Allah for its good."
+      },
+      "sources": [
+        {
+          "collection": "tirmidhi",
+          "number": "2252",
+          "numbering": "sunnah.com",
+          "narrator": "Ubayy ibn Kaʿb",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Albani"
+            },
+            {
+              "grade": "sahih",
+              "by": "Ahmad Shakir"
+            }
+          ],
+          "url": "https://sunnah.com/tirmidhi:2252"
+        }
+      ],
+      "explain": {
+        "ar": "الريح تجري بأمر الله، فسبُّها لا يليق بالمؤمن؛ والمشروع أن يسأل الله خيرها ويستعيذ به من شرّها.",
+        "en": "The wind moves by Allah's command, so cursing it does not befit a believer; instead ask Allah for its good and refuge from its harm."
+      },
+      "newMuslim": {
+        "ar": "بدل أن تتضايق من الريح بالكلام، اسأل الله خيرها.",
+        "en": "Rather than grumbling about the wind, ask Allah for its good."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "دعاء-الريح",
+      "en": "wind-dua"
+    },
+    "template": "wind"
+  },
+  "keywords": {
+    "ar": [
+      "ريح",
+      "رياح",
+      "عاصفة",
+      "دعاء الريح"
+    ],
+    "en": [
+      "wind",
+      "storm",
+      "dua for wind"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

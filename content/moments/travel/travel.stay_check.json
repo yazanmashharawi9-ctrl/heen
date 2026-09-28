@@ -1,0 +1,103 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "travel.stay_check",
+  "rev": 1,
+  "category": "travel",
+  "trigger": {
+    "type": "travel",
+    "event": "STAY_CHECK"
+  },
+  "defaultOn": true,
+  "title": {
+    "ar": "هل ما زلت مسافرًا؟",
+    "en": "Are you still a traveller?"
+  },
+  "push": {
+    "title": {
+      "ar": "مضت أربعة أيام على سفرك 🗓️",
+      "en": "Four days into your trip 🗓️"
+    },
+    "body": {
+      "ar": "إذا نويتَ الإقامة أكثر من أربعة أيام، فعند جمهور العلماء تُتمّ الصلاة. افتح للتفصيل.",
+      "en": "If you intend to stay more than four days, most scholars say you pray in full. Open for details."
+    }
+  },
+  "items": [
+    {
+      "kind": "info",
+      "ar": "إذا طالت إقامتك في بلدٍ واحد فراجع حكم القصر؛ فالعلماء مختلفون في المدة التي تنقطع بعدها رخصة السفر.",
+      "quote": "خَرَجْنَا مَعَ النَّبِيِّ ﷺ مِنَ الْمَدِينَةِ إِلَى مَكَّةَ، فَكَانَ يُصَلِّي رَكْعَتَيْنِ رَكْعَتَيْنِ حَتَّى رَجَعْنَا إِلَى الْمَدِينَةِ. قُلْتُ: أَقَمْتُمْ بِمَكَّةَ شَيْئًا؟ قَالَ: أَقَمْنَا بِهَا عَشْرًا",
+      "tr": {
+        "en": "If you stay in one place for a long time, check the ruling on shortening — scholars differ on how long a stay ends the traveller's concession."
+      },
+      "sources": [
+        {
+          "collection": "bukhari",
+          "number": "1081",
+          "numbering": "fath_al_bari",
+          "narrator": "Anas ibn Mālik",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:1081"
+        }
+      ],
+      "explain": {
+        "ar": "قصر النبي ﷺ الصلاة في حجّة الوداع طوال إقامته عشرة أيام بين مكة ومنى وعرفة. واختلف العلماء في المدة التي إن نوى المسافر إقامتها في مكانٍ واحد أتمّ الصلاة.",
+        "en": "In the Farewell Hajj the Prophet ﷺ shortened his prayers throughout a ten-day stay between Makkah, Minā and ʿArafah. Scholars differ on how long an intended stay in one place means you pray in full."
+      },
+      "newMuslim": {
+        "ar": "إن لم تكن متأكدًا فاسأل إمام المسجد في البلد الذي أنت فيه.",
+        "en": "If you're unsure, ask the imam of a local mosque where you are."
+      }
+    }
+  ],
+  "fiqh": [
+    {
+      "topic": {
+        "ar": "مدة الإقامة التي يُتمّ بعدها",
+        "en": "How long a stay before praying in full"
+      },
+      "majority": {
+        "ar": "إذا نوى المسافر الإقامة في مكانٍ أكثر من أربعة أيام أتمّ الصلاة (المالكية والشافعية والحنابلة، على تفصيلٍ في حساب الأيام). ومن لم يعزم على إقامة وينتظر قضاء حاجته ففي المسألة تفصيل؛ فاسأل أهل العلم.",
+        "en": "If a traveller intends to stay somewhere more than four days, they pray in full (Mālikī, Shāfiʿī and Ḥanbalī, with details on counting the days). If you haven't decided and are waiting for your business to finish, the ruling has details — ask a scholar."
+      },
+      "differences": [
+        {
+          "madhhab": "hanafi",
+          "text": {
+            "ar": "إذا نوى الإقامة خمسة عشر يومًا فأكثر أتمّ الصلاة.",
+            "en": "If you intend to stay fifteen days or more, you pray in full."
+          }
+        }
+      ]
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "مدة-القصر",
+      "en": "travel-stay-length"
+    },
+    "template": "travel"
+  },
+  "keywords": {
+    "ar": [
+      "إقامة",
+      "مدة القصر",
+      "أربعة أيام",
+      "إتمام الصلاة"
+    ],
+    "en": [
+      "length of stay",
+      "praying in full",
+      "four days"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

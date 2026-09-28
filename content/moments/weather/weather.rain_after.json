@@ -1,0 +1,96 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "weather.rain_after",
+  "rev": 1,
+  "category": "weather",
+  "trigger": {
+    "type": "weather",
+    "event": "RAIN_AFTER"
+  },
+  "defaultOn": false,
+  "title": {
+    "ar": "بعد نزول المطر",
+    "en": "After the rain"
+  },
+  "push": {
+    "title": {
+      "ar": "هدأ المطر 🌦️",
+      "en": "The rain has eased 🌦️"
+    },
+    "body": {
+      "ar": "قل: «مُطِرنا بفضل الله ورحمته» — فالمطر نعمة من الله وحده.",
+      "en": "Say: “We have been given rain by the grace and mercy of Allah” — rain is a blessing from Allah alone."
+    }
+  },
+  "items": [
+    {
+      "kind": "dhikr",
+      "ar": "مُطِرْنَا بِفَضْلِ اللَّهِ وَرَحْمَتِهِ",
+      "translit": "Muṭirnā bi-faḍli-llāhi wa raḥmatih",
+      "tr": {
+        "en": "We have been given rain by the grace and mercy of Allah."
+      },
+      "sources": [
+        {
+          "collection": "bukhari",
+          "number": "846",
+          "numbering": "fath_al_bari",
+          "narrator": "Zayd ibn Khālid al-Juhanī",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:846",
+          "note": "حديث قدسي"
+        },
+        {
+          "collection": "muslim",
+          "number": "71",
+          "numbering": "abdul_baqi",
+          "narrator": "Zayd ibn Khālid al-Juhanī",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:71"
+        }
+      ],
+      "explain": {
+        "ar": "صلّى النبي ﷺ الصبح بالحديبية بعد ليلةٍ ممطرة، ثم أخبر أن الله قال: «أصبح من عبادي مؤمنٌ بي وكافر؛ فأما من قال: مُطرنا بفضل الله ورحمته، فذلك مؤمنٌ بي كافرٌ بالكوكب». فالمطر نعمةٌ من الله وحده، لا من النجوم.",
+        "en": "After a rainy night at al-Ḥudaybiyah, the Prophet ﷺ related that Allah said: “Some of My servants have woken as believers in Me and some as disbelievers. Whoever says ‘We have been given rain by the grace and mercy of Allah’ believes in Me and disbelieves in the stars.” Rain is Allah's gift, not the work of the stars."
+      },
+      "newMuslim": {
+        "ar": "كان بعض الناس قديمًا ينسبون المطر إلى النجوم، فعلّمنا النبي ﷺ أن ننسب النعمة إلى الله. قلها بعد أن يهدأ المطر.",
+        "en": "Some people used to credit rain to the stars; the Prophet ﷺ taught us to credit the blessing to Allah. Say it once the rain eases."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "ذكر-بعد-المطر",
+      "en": "after-rain-dhikr"
+    },
+    "template": "rain"
+  },
+  "keywords": {
+    "ar": [
+      "مطر",
+      "بعد المطر",
+      "مطرنا بفضل الله"
+    ],
+    "en": [
+      "rain",
+      "after rain",
+      "dhikr"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

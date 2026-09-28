@@ -1,0 +1,163 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "calendar.dhul_hijjah_ten",
+  "rev": 1,
+  "category": "calendar",
+  "trigger": {
+    "type": "hijri",
+    "rule": "DHUL_HIJJAH_TEN"
+  },
+  "defaultOn": true,
+  "title": {
+    "ar": "العشر الأوائل من ذي الحجة",
+    "en": "The first ten days of Dhul-Hijjah"
+  },
+  "push": {
+    "title": {
+      "ar": "بدأت العشر من ذي الحجة 🌿",
+      "en": "The ten days of Dhul-Hijjah have begun 🌿"
+    },
+    "body": {
+      "ar": "ما من أيامٍ العملُ الصالح فيهن أحبّ إلى الله من هذه العشر — أكثِر من الذكر والصدقة والطاعات.",
+      "en": "No days are dearer to Allah for good deeds than these ten — increase in dhikr, charity and worship."
+    }
+  },
+  "items": [
+    {
+      "kind": "practice",
+      "ar": "الإكثار من العمل الصالح في العشر الأوائل من ذي الحجة.",
+      "quote": "مَا مِنْ أَيَّامٍ الْعَمَلُ الصَّالِحُ فِيهِنَّ أَحَبُّ إِلَى اللَّهِ مِنْ هَذِهِ الْأَيَّامِ الْعَشْرِ، فَقَالُوا: يَا رَسُولَ اللَّهِ، وَلَا الْجِهَادُ فِي سَبِيلِ اللَّهِ؟ فَقَالَ: «وَلَا الْجِهَادُ فِي سَبِيلِ اللَّهِ، إِلَّا رَجُلٌ خَرَجَ بِنَفْسِهِ وَمَالِهِ فَلَمْ يَرْجِعْ مِنْ ذَلِكَ بِشَيْءٍ»",
+      "tr": {
+        "en": "Doing more good deeds in the first ten days of Dhul-Hijjah."
+      },
+      "sources": [
+        {
+          "collection": "tirmidhi",
+          "number": "757",
+          "numbering": "sunnah.com",
+          "narrator": "ʿAbdullāh ibn ʿAbbās",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Tirmidhi",
+              "note": "قال: حسن صحيح غريب"
+            },
+            {
+              "grade": "sahih",
+              "by": "al-Albani"
+            }
+          ],
+          "url": "https://sunnah.com/tirmidhi:757"
+        },
+        {
+          "collection": "bukhari",
+          "number": "969",
+          "numbering": "fath_al_bari",
+          "narrator": "ʿAbdullāh ibn ʿAbbās",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:969",
+          "note": "بلفظ آخر"
+        }
+      ],
+      "explain": {
+        "ar": "في هذه الأيام يجتمع الحجّ ويوم عرفة والأضحية، والعمل الصالح فيها أحبّ إلى الله من غيرها. وذكر البخاري تعليقًا أن ابن عمر وأبا هريرة كانا يخرجان إلى السوق في أيام العشر يكبّران، ويكبّر الناس بتكبيرهما.",
+        "en": "These days bring together Hajj, the Day of Arafah and the sacrifice, and good deeds in them are dearer to Allah than at any other time. Al-Bukhari mentions that Ibn ʿUmar and Abū Hurayrah would go to the market in these days saying takbir, and people would say it with them."
+      },
+      "newMuslim": {
+        "ar": "العمل الصالح يشمل كل خير: الصلاة، والذكر، والصدقة، وبرّ الوالدين، والصيام.",
+        "en": "Good deeds include every good thing: prayer, dhikr, charity, kindness to parents, fasting."
+      }
+    }
+  ],
+  "fiqh": [
+    {
+      "topic": {
+        "ar": "من أراد أن يضحّي: الشعر والأظفار",
+        "en": "If you intend to sacrifice: hair and nails"
+      },
+      "majority": {
+        "ar": "من أراد أن يضحّي فلا يأخذ من شعره ولا من أظفاره شيئًا منذ دخول العشر حتى يذبح أضحيته.",
+        "en": "Whoever intends to offer a sacrifice should not cut their hair or nails from the start of the ten days until the animal is sacrificed."
+      },
+      "differences": [
+        {
+          "madhhab": "hanbali",
+          "text": {
+            "ar": "يحرم الأخذ منهما.",
+            "en": "Cutting them is forbidden."
+          }
+        },
+        {
+          "madhhab": "shafii",
+          "text": {
+            "ar": "يُكره الأخذ منهما كراهة تنزيه.",
+            "en": "Cutting them is disliked."
+          }
+        },
+        {
+          "madhhab": "maliki",
+          "text": {
+            "ar": "يُكره الأخذ منهما.",
+            "en": "Cutting them is disliked."
+          }
+        },
+        {
+          "madhhab": "hanafi",
+          "text": {
+            "ar": "لا يُكره.",
+            "en": "It is not disliked."
+          }
+        }
+      ],
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "1977",
+          "numbering": "abdul_baqi",
+          "narrator": "Umm Salamah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:1977c",
+          "note": "«إذا دخلت العشر وأراد أحدكم أن يضحّي فلا يمسّ من شعره وبشره شيئًا»"
+        }
+      ]
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "عشر-ذي-الحجة",
+      "en": "ten-days-of-dhul-hijjah"
+    },
+    "template": "calendar"
+  },
+  "keywords": {
+    "ar": [
+      "عشر ذي الحجة",
+      "ذو الحجة",
+      "العمل الصالح",
+      "التكبير",
+      "الأضحية"
+    ],
+    "en": [
+      "dhul hijjah",
+      "ten days",
+      "takbir",
+      "udhiyah"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

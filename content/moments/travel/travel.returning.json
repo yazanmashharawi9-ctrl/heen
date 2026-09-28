@@ -1,0 +1,114 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "travel.returning",
+  "rev": 1,
+  "category": "travel",
+  "trigger": {
+    "type": "travel",
+    "event": "RETURNING"
+  },
+  "defaultOn": true,
+  "title": {
+    "ar": "عند العودة من السفر",
+    "en": "Returning from a journey"
+  },
+  "push": {
+    "title": {
+      "ar": "حمدًا لله على السلامة 🏡",
+      "en": "Welcome home 🏡"
+    },
+    "body": {
+      "ar": "قل كما كان يقول النبي ﷺ: «آيبون تائبون عابدون لربّنا حامدون»",
+      "en": "Say as the Prophet ﷺ did: “Returning, repenting, worshipping, and praising our Lord.”"
+    }
+  },
+  "items": [
+    {
+      "kind": "dhikr",
+      "ar": "آيِبُونَ، تَائِبُونَ، عَابِدُونَ، لِرَبِّنَا حَامِدُونَ",
+      "translit": "Āyibūna, tāʾibūna, ʿābidūna, li-rabbinā ḥāmidūn",
+      "tr": {
+        "en": "We return, repenting, worshipping, and praising our Lord."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "1342",
+          "numbering": "abdul_baqi",
+          "narrator": "ʿAbdullāh ibn ʿUmar",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:1342",
+          "note": "يقوله مع دعاء السفر عند الرجوع"
+        }
+      ],
+      "explain": {
+        "ar": "كان النبي ﷺ إذا رجع من سفره قال دعاء السفر، وزاد فيه: «آيبون تائبون عابدون لربّنا حامدون».",
+        "en": "When the Prophet ﷺ returned from a journey, he would say the travel du'a and add: “Returning, repenting, worshipping, and praising our Lord.”"
+      },
+      "newMuslim": {
+        "ar": "«آيبون» أي: راجعون. تقولها وأنت عائدٌ إلى بلدك.",
+        "en": "“Āyibūn” means “we are returning”. Say it as you come back home."
+      }
+    },
+    {
+      "kind": "practice",
+      "ar": "إن تيسّر، فابدأ بالمسجد وصلِّ فيه ركعتين قبل أن تدخل بيتك.",
+      "quote": "كَانَ لَا يَقْدَمُ مِنْ سَفَرٍ إِلَّا نَهَارًا فِي الضُّحَى، فَإِذَا قَدِمَ بَدَأَ بِالْمَسْجِدِ فَصَلَّى فِيهِ رَكْعَتَيْنِ ثُمَّ جَلَسَ فِيهِ",
+      "tr": {
+        "en": "If you can, go to the mosque first and pray two rak'ahs there before going home."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "716",
+          "numbering": "abdul_baqi",
+          "narrator": "Kaʿb ibn Mālik",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:716"
+        }
+      ],
+      "explain": {
+        "ar": "كان من هدي النبي ﷺ إذا قدم من سفرٍ أن يبدأ بالمسجد فيصلّي فيه ركعتين.",
+        "en": "It was the Prophet's ﷺ way, on returning from a journey, to go to the mosque first and pray two rak'ahs."
+      },
+      "newMuslim": {
+        "ar": "إن لم يتيسّر المسجد فلا حرج؛ هذه سنّة وليست واجبًا.",
+        "en": "If the mosque isn't practical, that's fine — this is a Sunnah, not an obligation."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "دعاء-العودة-من-السفر",
+      "en": "returning-home-dua"
+    },
+    "template": "travel"
+  },
+  "keywords": {
+    "ar": [
+      "العودة من السفر",
+      "آيبون تائبون",
+      "رجوع"
+    ],
+    "en": [
+      "returning home",
+      "coming back",
+      "travel"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}
