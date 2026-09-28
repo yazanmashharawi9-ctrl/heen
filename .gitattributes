@@ -1,0 +1,9 @@
+# One line ending everywhere: the content tools, CI (Linux/macOS) and the
+# release scripts all expect LF. Windows batch files keep CRLF.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.png binary
+*.jpg binary
+*.jar binary
+*.ico binary

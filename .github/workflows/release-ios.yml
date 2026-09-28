@@ -1,0 +1,157 @@
+name: release-ios
+
+# Archives, signs and ships Heen to TestFlight from a GitHub-hosted Mac — the
+# same approach as Tubes, adapted for Flutter. Nobody needs to own a Mac.
+#
+# Required repository secrets (tools/asc/setup_signing.py creates the first three):
+#   IOS_DIST_P12_BASE64             distribution certificate + key, as a .p12
+#   IOS_DIST_P12_PASSWORD           password for that .p12
+#   IOS_PROVISIONING_PROFILE_BASE64 the "Heen App Store" provisioning profile
+#   ASC_KEY_ID / ASC_ISSUER_ID / ASC_KEY_B64   App Store Connect API key
+
+on:
+  workflow_dispatch:
+    inputs:
+      upload:
+        description: "Upload the build to TestFlight"
+        type: boolean
+        default: true
+      store_release:
+        description: "App Store release: refuse unless every moment is approved"
+        type: boolean
+        default: false
+      build_name:
+        description: "Version to stamp, e.g. 1.0.0 (blank keeps pubspec.yaml)"
+        type: string
+        default: ""
+
+env:
+  BUNDLE_ID: com.mashharawi.heen
+  TEAM_ID: 2G5KY3V739
+  PROFILE_NAME: Heen App Store
+
+jobs:
+  release:
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select latest available Xcode
+        run: |
+          LATEST=$(ls -d /Applications/Xcode_*.app 2>/dev/null | sort -V | tail -1)
+          if [ -n "$LATEST" ]; then sudo xcode-select -s "$LATEST"; fi
+          xcodebuild -version
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Build the content bundle
+        run: |
+          npm ci
+          if [ "${{ inputs.store_release }}" = "true" ]; then
+            npm run content:validate:release
+            node tools/content/build.ts --release
+          else
+            npm run content:build
+          fi
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.44.4
+          cache: true
+
+      # A throwaway keychain keeps the signing identity off the runner's login
+      # keychain and dies with the job.
+      - name: Import signing certificate
+        env:
+          P12_BASE64: ${{ secrets.IOS_DIST_P12_BASE64 }}
+          P12_PASSWORD: ${{ secrets.IOS_DIST_P12_PASSWORD }}
+        run: |
+          set -euo pipefail
+          KEYCHAIN="$RUNNER_TEMP/signing.keychain-db"
+          KEYCHAIN_PASSWORD=$(uuidgen)
+          echo "$P12_BASE64" | base64 --decode > "$RUNNER_TEMP/dist.p12"
+          security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN"
+          security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
+          security import "$RUNNER_TEMP/dist.p12" -k "$KEYCHAIN" \
+            -P "$P12_PASSWORD" -T /usr/bin/codesign -T /usr/bin/security
+          security set-key-partition-list -S apple-tool:,apple:,codesign: \
+            -s -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN" >/dev/null
+          security list-keychains -d user -s "$KEYCHAIN" $(security list-keychains -d user | tr -d '"')
+          rm -f "$RUNNER_TEMP/dist.p12"
+          security find-identity -v -p codesigning "$KEYCHAIN"
+
+      - name: Install provisioning profile
+        env:
+          PROFILE_BASE64: ${{ secrets.IOS_PROVISIONING_PROFILE_BASE64 }}
+        run: |
+          set -euo pipefail
+          PROFILES="$HOME/Library/MobileDevice/Provisioning Profiles"
+          mkdir -p "$PROFILES"
+          echo "$PROFILE_BASE64" | base64 --decode > "$RUNNER_TEMP/profile.mobileprovision"
+          UUID=$(security cms -D -i "$RUNNER_TEMP/profile.mobileprovision" | plutil -extract UUID raw -o - -)
+          cp "$RUNNER_TEMP/profile.mobileprovision" "$PROFILES/$UUID.mobileprovision"
+          echo "Installed profile $UUID"
+
+      # Unlike Tubes (no dependencies), a Flutter app builds plugin targets that
+      # must not be signed with the app's profile. Release.xcconfig is applied
+      # to the Runner target only, so signing settings go there instead of on
+      # the xcodebuild command line.
+      - name: Point the Runner target at the distribution profile
+        run: |
+          set -euo pipefail
+          IDENTITY=$(security find-identity -v -p codesigning "$RUNNER_TEMP/signing.keychain-db" \
+            | head -1 | sed -E 's/.*"(.*)".*/\1/')
+          echo "Signing with: $IDENTITY"
+          cat >> app/ios/Flutter/Release.xcconfig <<EOF
+          CODE_SIGN_STYLE = Manual
+          DEVELOPMENT_TEAM = $TEAM_ID
+          CODE_SIGN_IDENTITY = $IDENTITY
+          CODE_SIGN_IDENTITY[sdk=iphoneos*] = $IDENTITY
+          PROVISIONING_PROFILE_SPECIFIER = $PROFILE_NAME
+          EOF
+
+      - name: Build and export IPA
+        working-directory: app
+        run: |
+          set -euo pipefail
+          EXTRA=()
+          if [ -n "${{ inputs.build_name }}" ]; then EXTRA+=(--build-name "${{ inputs.build_name }}"); fi
+          flutter build ipa --release \
+            --build-number ${{ github.run_number }} \
+            --export-options-plist ios/ExportOptions.plist \
+            ${EXTRA[@]+"${EXTRA[@]}"}
+          ls -lh build/ios/ipa
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Heen-ipa
+          path: app/build/ios/ipa/*.ipa
+          if-no-files-found: error
+
+      - name: Validate and upload to TestFlight
+        if: ${{ inputs.upload }}
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_B64: ${{ secrets.ASC_KEY_B64 }}
+        run: |
+          set -euo pipefail
+          # altool finds API keys only in this directory, by this exact filename.
+          KEYS="$HOME/.appstoreconnect/private_keys"
+          mkdir -p "$KEYS"
+          echo "$ASC_KEY_B64" | base64 --decode > "$KEYS/AuthKey_${ASC_KEY_ID}.p8"
+          IPA=$(ls app/build/ios/ipa/*.ipa | head -1)
+          xcrun altool --validate-app -f "$IPA" -t ios --apiKey "$ASC_KEY_ID" --apiIssuer "$ASC_ISSUER_ID"
+          xcrun altool --upload-app -f "$IPA" -t ios --apiKey "$ASC_KEY_ID" --apiIssuer "$ASC_ISSUER_ID"
+          rm -f "$KEYS/AuthKey_${ASC_KEY_ID}.p8"
+          echo "Uploaded. TestFlight processing usually takes 5-15 minutes."
+
+      - name: Clean up keychain
+        if: always()
+        run: security delete-keychain "$RUNNER_TEMP/signing.keychain-db" || true

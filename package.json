@@ -1,0 +1,24 @@
+{
+  "name": "heen-tools",
+  "private": true,
+  "description": "Content tooling and shared TypeScript tests for Heen. The app lives in app/, the backend in supabase/.",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "content:validate": "node tools/content/validate.ts",
+    "content:validate:release": "node tools/content/validate.ts --release",
+    "content:build": "node tools/content/build.ts",
+    "content:format": "node tools/content/format.ts",
+    "content:review": "node tools/content/review.ts",
+    "test": "node --test \"tools/**/*.test.ts\" \"supabase/functions/_shared/**/*.test.ts\"",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "typescript": "^7.0.2"
+  }
+}

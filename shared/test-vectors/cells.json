@@ -1,0 +1,185 @@
+{
+  "cellDeg": 0.25,
+  "vectors": [
+    {
+      "name": "Amman",
+      "lat": 31.9539,
+      "lon": 35.9106,
+      "cell": "487-863",
+      "center": {
+        "lat": 31.875,
+        "lon": 35.875
+      }
+    },
+    {
+      "name": "Jerusalem",
+      "lat": 31.7683,
+      "lon": 35.2137,
+      "cell": "487-860",
+      "center": {
+        "lat": 31.875,
+        "lon": 35.125
+      }
+    },
+    {
+      "name": "Mecca",
+      "lat": 21.4225,
+      "lon": 39.8262,
+      "cell": "445-879",
+      "center": {
+        "lat": 21.375,
+        "lon": 39.875
+      }
+    },
+    {
+      "name": "Riyadh",
+      "lat": 24.7136,
+      "lon": 46.6753,
+      "cell": "458-906",
+      "center": {
+        "lat": 24.625,
+        "lon": 46.625
+      }
+    },
+    {
+      "name": "Cairo",
+      "lat": 30.0444,
+      "lon": 31.2357,
+      "cell": "480-844",
+      "center": {
+        "lat": 30.125,
+        "lon": 31.125
+      }
+    },
+    {
+      "name": "Istanbul",
+      "lat": 41.0082,
+      "lon": 28.9784,
+      "cell": "524-835",
+      "center": {
+        "lat": 41.125,
+        "lon": 28.875
+      }
+    },
+    {
+      "name": "London",
+      "lat": 51.5072,
+      "lon": -0.1276,
+      "cell": "566-719",
+      "center": {
+        "lat": 51.625,
+        "lon": -0.125
+      }
+    },
+    {
+      "name": "New York",
+      "lat": 40.7128,
+      "lon": -74.006,
+      "cell": "522-423",
+      "center": {
+        "lat": 40.625,
+        "lon": -74.125
+      }
+    },
+    {
+      "name": "Jakarta",
+      "lat": -6.2088,
+      "lon": 106.8456,
+      "cell": "335-1147",
+      "center": {
+        "lat": -6.125,
+        "lon": 106.875
+      }
+    },
+    {
+      "name": "Auckland",
+      "lat": -36.8485,
+      "lon": 174.7633,
+      "cell": "212-1419",
+      "center": {
+        "lat": -36.875,
+        "lon": 174.875
+      }
+    },
+    {
+      "name": "Anchorage",
+      "lat": 61.2181,
+      "lon": -149.9003,
+      "cell": "604-120",
+      "center": {
+        "lat": 61.125,
+        "lon": -149.875
+      }
+    },
+    {
+      "name": "origin",
+      "lat": 0,
+      "lon": 0,
+      "cell": "360-720",
+      "center": {
+        "lat": 0.125,
+        "lon": 0.125
+      }
+    },
+    {
+      "name": "cell boundary",
+      "lat": 31.75,
+      "lon": 35.75,
+      "cell": "487-863",
+      "center": {
+        "lat": 31.875,
+        "lon": 35.875
+      }
+    },
+    {
+      "name": "just below a boundary",
+      "lat": 31.7499999,
+      "lon": 35.7499999,
+      "cell": "486-862",
+      "center": {
+        "lat": 31.625,
+        "lon": 35.625
+      }
+    },
+    {
+      "name": "south pole",
+      "lat": -90,
+      "lon": -180,
+      "cell": "0-0",
+      "center": {
+        "lat": -89.875,
+        "lon": -179.875
+      }
+    },
+    {
+      "name": "north pole",
+      "lat": 90,
+      "lon": 179.99,
+      "cell": "719-1439",
+      "center": {
+        "lat": 89.875,
+        "lon": 179.875
+      }
+    },
+    {
+      "name": "antimeridian east",
+      "lat": 0,
+      "lon": 180,
+      "cell": "360-0",
+      "center": {
+        "lat": 0.125,
+        "lon": -179.875
+      }
+    },
+    {
+      "name": "antimeridian west",
+      "lat": 0,
+      "lon": -180,
+      "cell": "360-0",
+      "center": {
+        "lat": 0.125,
+        "lon": -179.875
+      }
+    }
+  ]
+}

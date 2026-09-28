@@ -1,0 +1,111 @@
+name: release-android
+
+# Builds a signed App Bundle and uploads it to Google Play.
+# The very first upload of a new app must be done by hand in Play Console;
+# after that this workflow can push to any track.
+#
+# Required repository secrets:
+#   ANDROID_KEYSTORE_B64       upload keystore (.jks), base64
+#   ANDROID_KEYSTORE_PASSWORD  keystore password
+#   ANDROID_KEY_ALIAS          key alias
+#   ANDROID_KEY_PASSWORD       key password
+#   PLAY_SERVICE_ACCOUNT_JSON  Google Play Developer API service account (upload only)
+# Optional (once push is added):
+#   GOOGLE_SERVICES_JSON       Firebase config for FCM — Android only
+
+on:
+  workflow_dispatch:
+    inputs:
+      track:
+        description: "Play track"
+        type: choice
+        options: [internal, alpha, beta, production]
+        default: internal
+      status:
+        description: "Release status (draft is required until the app is first published)"
+        type: choice
+        options: [draft, completed]
+        default: draft
+      store_release:
+        description: "Refuse unless every moment is approved"
+        type: boolean
+        default: false
+      upload:
+        description: "Upload to Google Play"
+        type: boolean
+        default: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Build the content bundle
+        run: |
+          npm ci
+          if [ "${{ inputs.store_release }}" = "true" ]; then
+            npm run content:validate:release
+            node tools/content/build.ts --release
+          else
+            npm run content:build
+          fi
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.44.4
+          cache: true
+
+      - name: Write signing config from secrets
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          GOOGLE_SERVICES_JSON: ${{ secrets.GOOGLE_SERVICES_JSON }}
+        run: |
+          set -euo pipefail
+          echo "$KEYSTORE_B64" | base64 --decode > app/android/upload.jks
+          cat > app/android/key.properties <<EOF
+          storeFile=upload.jks
+          storePassword=$KEYSTORE_PASSWORD
+          keyAlias=$KEY_ALIAS
+          keyPassword=$KEY_PASSWORD
+          EOF
+          if [ -n "$GOOGLE_SERVICES_JSON" ]; then
+            echo "$GOOGLE_SERVICES_JSON" > app/android/app/google-services.json
+          fi
+
+      - name: Build App Bundle
+        working-directory: app
+        run: flutter build appbundle --release --build-number ${{ github.run_number }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Heen-aab
+          path: app/build/app/outputs/bundle/release/app-release.aab
+          if-no-files-found: error
+
+      - name: Upload to Google Play
+        if: ${{ inputs.upload }}
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+          packageName: com.mashharawi.heen
+          releaseFiles: app/build/app/outputs/bundle/release/app-release.aab
+          track: ${{ inputs.track }}
+          status: ${{ inputs.status }}
+
+      - name: Remove signing material
+        if: always()
+        run: rm -f app/android/upload.jks app/android/key.properties app/android/app/google-services.json

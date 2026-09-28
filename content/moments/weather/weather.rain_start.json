@@ -1,0 +1,84 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "weather.rain_start",
+  "rev": 1,
+  "category": "weather",
+  "trigger": {
+    "type": "weather",
+    "event": "RAIN_START"
+  },
+  "defaultOn": true,
+  "title": {
+    "ar": "عند نزول المطر",
+    "en": "When it rains"
+  },
+  "push": {
+    "title": {
+      "ar": "يبدو أن المطر ينزل عندك 🌧️",
+      "en": "It seems to be raining near you 🌧️"
+    },
+    "body": {
+      "ar": "كان النبي ﷺ إذا رأى المطر قال: «اللهم صيّبًا نافعًا»",
+      "en": "When the Prophet ﷺ saw rain he would say: “Allāhumma ṣayyiban nāfiʿā”"
+    }
+  },
+  "items": [
+    {
+      "kind": "dua",
+      "ar": "اللَّهُمَّ صَيِّبًا نَافِعًا",
+      "translit": "Allāhumma ṣayyiban nāfiʿā",
+      "tr": {
+        "en": "O Allah, make it a beneficial rain."
+      },
+      "sources": [
+        {
+          "collection": "bukhari",
+          "number": "1032",
+          "numbering": "fath_al_bari",
+          "narrator": "ʿĀʾishah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:1032"
+        }
+      ],
+      "explain": {
+        "ar": "«الصيّب» هو المطر المنهمر. والمعنى: اجعله يا ربّ مطرًا غزيرًا نافعًا لا ضرر فيه.",
+        "en": "“Ṣayyib” is rain that pours down. The meaning is: O Lord, make it abundant rain that brings benefit and no harm."
+      },
+      "newMuslim": {
+        "ar": "دعاء قصير جدًا كان النبي ﷺ يقوله كلما رأى المطر. قله الآن بقلب حاضر، ولا بأس أن تقرأه من الشاشة.",
+        "en": "A very short du'a the Prophet ﷺ said whenever he saw rain. Say it now with presence of heart — reading it from the screen is fine."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "دعاء-المطر",
+      "en": "rain-dua"
+    },
+    "template": "rain"
+  },
+  "keywords": {
+    "ar": [
+      "مطر",
+      "غيث",
+      "شتاء",
+      "دعاء المطر",
+      "صيبا نافعا"
+    ],
+    "en": [
+      "rain",
+      "dua for rain",
+      "weather",
+      "winter"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:heen:schema:moment",
+  "title": "Heen moment",
+  "description": "One real-world moment and the Sunnah that belongs to it. One file per moment under content/moments/<category>/<id>.json.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "rev", "category", "trigger", "defaultOn", "title", "push", "items", "review"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": {
+      "description": "Stable id, <category>.<name>. Never reuse an id for different content.",
+      "type": "string",
+      "pattern": "^(weather|calendar|sky|travel|place)\\.[a-z][a-z0-9_]*$"
+    },
+    "rev": { "description": "Bump on every content change.", "type": "integer", "minimum": 1 },
+    "category": { "enum": ["weather", "calendar", "sky", "travel", "place"] },
+    "trigger": { "$ref": "#/$defs/trigger" },
+    "defaultOn": { "description": "Enabled for new users. Keep this to a small set to avoid notification fatigue.", "type": "boolean" },
+    "title": { "$ref": "#/$defs/text" },
+    "push": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "body"],
+      "properties": {
+        "title": { "$ref": "#/$defs/text" },
+        "body": { "$ref": "#/$defs/text" }
+      }
+    },
+    "items": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/item" } },
+    "fiqh": { "type": "array", "items": { "$ref": "#/$defs/fiqhNote" } },
+    "share": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["slug"],
+      "properties": {
+        "slug": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["ar", "en"],
+          "properties": {
+            "ar": { "type": "string", "pattern": "^[\\p{L}\\p{M}0-9-]+$" },
+            "en": { "type": "string", "pattern": "^[a-z0-9-]+$" }
+          }
+        },
+        "template": { "type": "string" }
+      }
+    },
+    "keywords": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ar": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "en": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "review": { "$ref": "#/$defs/review" }
+  },
+  "$defs": {
+    "text": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ar", "en"],
+      "properties": {
+        "ar": { "type": "string", "minLength": 1 },
+        "en": { "type": "string", "minLength": 1 }
+      }
+    },
+    "trigger": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "event"],
+          "properties": {
+            "type": { "const": "weather" },
+            "event": { "enum": ["RAIN_START", "RAIN_FIRST_OF_SEASON", "RAIN_AFTER", "RAIN_HEAVY", "THUNDER", "WIND_STRONG", "SNOW", "HEAT", "COLD"] }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "rule"],
+          "properties": {
+            "type": { "const": "hijri" },
+            "rule": { "enum": ["MONTH_START", "AYYAM_AL_BID", "ARAFAH", "TASUA_ASHURA", "DHUL_HIJJAH_TEN", "SHAWWAL_SIX", "LAST_TEN_NIGHTS", "RAMADAN_START"] }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "days"],
+          "properties": {
+            "type": { "const": "weekday" },
+            "days": {
+              "description": "ISO weekday numbers, 1 = Monday … 7 = Sunday.",
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": { "type": "integer", "minimum": 1, "maximum": 7 }
+            },
+            "at": { "enum": ["EVENING_BEFORE", "MORNING", "LAST_HOUR_BEFORE_MAGHRIB"] }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type"],
+          "properties": { "type": { "const": "fastLength" } }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "kind"],
+          "properties": {
+            "type": { "const": "eclipse" },
+            "kind": { "enum": ["solar", "lunar"] }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "event"],
+          "properties": {
+            "type": { "const": "travel" },
+            "event": { "enum": ["LEAVING", "TRAVELER", "RETURNING", "STAY_CHECK"] }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "kind"],
+          "properties": {
+            "type": { "const": "place" },
+            "kind": { "enum": ["mosque", "cemetery"] }
+          }
+        }
+      ]
+    },
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "ar", "tr", "sources", "explain"],
+      "properties": {
+        "kind": {
+          "description": "dua/dhikr: words to say. practice: something to do. quran: a verse. info: guidance.",
+          "enum": ["dua", "dhikr", "practice", "quran", "info"]
+        },
+        "ar": { "description": "Arabic text shown large. For dua/dhikr/quran it must be fully vocalised.", "type": "string", "minLength": 1 },
+        "quote": { "description": "Wording of the narration itself, when `ar` is a summary of a practice.", "type": "string" },
+        "translit": { "type": "string" },
+        "tr": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["en"],
+          "properties": { "en": { "type": "string", "minLength": 1 } }
+        },
+        "repeat": { "type": "integer", "minimum": 1 },
+        "showAsWeak": {
+          "description": "Must be true to show an item whose best grading is da'if; the UI then labels it as weak.",
+          "type": "boolean"
+        },
+        "sources": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/source" } },
+        "explain": { "$ref": "#/$defs/text" },
+        "newMuslim": { "$ref": "#/$defs/text" }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["collection", "number", "type"],
+      "properties": {
+        "collection": {
+          "enum": ["quran", "bukhari", "muslim", "abudawud", "tirmidhi", "nasai", "ibnmajah", "ahmad", "malik", "darimi", "adab_mufrad", "bayhaqi", "hakim", "ibnhibban", "other"]
+        },
+        "number": { "description": "Hadith number, or surah:ayah for the Qur'an.", "type": "string", "minLength": 1 },
+        "numbering": { "description": "Which numbering the number follows, e.g. fath_al_bari, abdul_baqi, sunnah.com.", "type": "string" },
+        "narrator": { "type": "string" },
+        "type": {
+          "description": "marfu: the Prophet's ﷺ words or practice. mawquf: a Companion's. maqtu: a Successor's.",
+          "enum": ["quran", "marfu", "mawquf", "maqtu"]
+        },
+        "grades": {
+          "description": "Required for everything except the Qur'an.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["grade", "by"],
+            "properties": {
+              "grade": { "enum": ["sahih", "hasan", "sahih_li_ghayrihi", "hasan_li_ghayrihi", "daif"] },
+              "by": { "type": "string", "minLength": 1 },
+              "note": { "type": "string" }
+            }
+          }
+        },
+        "url": { "type": "string", "format": "uri" },
+        "note": { "type": "string" }
+      }
+    },
+    "fiqhNote": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["topic", "majority"],
+      "properties": {
+        "topic": { "$ref": "#/$defs/text" },
+        "majority": { "description": "The general / majority position.", "$ref": "#/$defs/text" },
+        "differences": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["madhhab", "text"],
+            "properties": {
+              "madhhab": { "enum": ["hanafi", "maliki", "shafii", "hanbali"] },
+              "text": { "$ref": "#/$defs/text" }
+            }
+          }
+        },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/source" } }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": { "enum": ["draft", "in_review", "changes_requested", "approved"] },
+        "reviewer": { "type": "string" },
+        "date": { "type": "string", "format": "date" },
+        "hash": {
+          "description": "sha256 of the whole moment minus this review block, written when it is approved. Any later edit invalidates the approval.",
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "@@locale": "en",
+  "appTitle": "Heen",
+  "@appTitle": {
+    "description": "App name. Arabic: حِين"
+  },
+  "appTagline": "The Sunnah in its moment",
+  "tabToday": "Today",
+  "tabLibrary": "Library",
+  "tabSettings": "Settings",
+  "todayComingUp": "Coming up",
+  "todayWeatherTitle": "Weather moments",
+  "todayWeatherBody": "When it rains, thunders or snows where you are, Heen will remind you of the Sunnah for that moment. Coming soon.",
+  "todayWhiteDaysDates": "{first} – {last}",
+  "@todayWhiteDaysDates": {
+    "placeholders": {
+      "first": {
+        "type": "String"
+      },
+      "last": {
+        "type": "String"
+      }
+    }
+  },
+  "todayDhulHijjahNote": "In Dhul-Hijjah the 13th is a Day of Tashrīq, so the White Days start on the 14th.",
+  "librarySearchHint": "Search: rain, crescent, fasting…",
+  "libraryEmpty": "Nothing matches your search.",
+  "categoryWeather": "Weather",
+  "categoryCalendar": "Calendar",
+  "categorySky": "Sky",
+  "categoryTravel": "Travel",
+  "categoryPlace": "Places",
+  "momentDraftBanner": "Draft — this content has not been reviewed yet.",
+  "momentSources": "Sources",
+  "momentFiqh": "Fiqh notes",
+  "momentGeneralView": "General view",
+  "momentNewMuslim": "For new Muslims",
+  "momentRepeat": "× {count}",
+  "@momentRepeat": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "momentNotFound": "This moment no longer exists.",
+  "momentOpenSource": "Open source",
+  "gradeSahih": "Sahih",
+  "gradeHasan": "Hasan",
+  "gradeSahihLiGhayrihi": "Sahih li-ghayrihi",
+  "gradeHasanLiGhayrihi": "Hasan li-ghayrihi",
+  "gradeDaif": "Weak (da'if)",
+  "gradedBy": "{grade} — {by}",
+  "@gradedBy": {
+    "placeholders": {
+      "grade": {
+        "type": "String"
+      },
+      "by": {
+        "type": "String"
+      }
+    }
+  },
+  "narratedBy": "Narrated by {narrator}",
+  "@narratedBy": {
+    "placeholders": {
+      "narrator": {
+        "type": "String"
+      }
+    }
+  },
+  "sourceMawquf": "Words of a Companion (athar)",
+  "collectionQuran": "The Qur'an",
+  "collectionBukhari": "Sahih al-Bukhari",
+  "collectionMuslim": "Sahih Muslim",
+  "collectionAbuDawud": "Sunan Abi Dawud",
+  "collectionTirmidhi": "Jami' at-Tirmidhi",
+  "collectionNasai": "Sunan an-Nasa'i",
+  "collectionIbnMajah": "Sunan Ibn Majah",
+  "collectionAhmad": "Musnad Ahmad",
+  "collectionMalik": "Muwatta Malik",
+  "collectionDarimi": "Sunan ad-Darimi",
+  "collectionAdabMufrad": "Al-Adab al-Mufrad",
+  "collectionBayhaqi": "Al-Bayhaqi",
+  "collectionHakim": "Al-Mustadrak (al-Hakim)",
+  "collectionIbnHibban": "Sahih Ibn Hibban",
+  "collectionOther": "Other",
+  "madhhabHanafi": "Hanafi",
+  "madhhabMaliki": "Maliki",
+  "madhhabShafii": "Shafi'i",
+  "madhhabHanbali": "Hanbali",
+  "settingsLanguage": "Language",
+  "settingsNewMuslim": "New Muslim mode",
+  "settingsNewMuslimHint": "Simple explanations and transliteration for every du'a",
+  "settingsHijriOffset": "Hijri date adjustment",
+  "settingsHijriOffsetHint": "If your country starts the month a day before or after the Umm al-Qura calendar",
+  "settingsHijriPreview": "Today: {date}",
+  "@settingsHijriPreview": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsAbout": "About",
+  "settingsAboutBody": "Heen is free, has no ads and no accounts, and is open source — a sadaqah jariyah. Every text shows its source and grading.",
+  "settingsNoAdjustment": "No adjustment",
+  "settingsDaysAhead": "{days, plural, one{1 day ahead} other{{days} days ahead}}",
+  "@settingsDaysAhead": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsDaysBehind": "{days, plural, one{1 day behind} other{{days} days behind}}",
+  "@settingsDaysBehind": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  }
+}

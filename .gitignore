@@ -1,0 +1,54 @@
+# ---------------------------------------------------------------------------
+# Secrets. This repository is PUBLIC — none of these may ever be committed.
+# ---------------------------------------------------------------------------
+# Apple signing material produced by tools/asc/setup_signing.py
+tools/asc/out/
+tools/asc/.env
+*.p12
+*.mobileprovision
+*.p8
+AuthKey_*.p8
+*.cer
+*.pem
+*.csr
+# Android signing
+*.jks
+*.keystore
+key.properties
+# Firebase (Android FCM only) — injected at build time from GitHub Secrets
+google-services.json
+GoogleService-Info.plist
+*service-account*.json
+# Supabase secrets
+supabase/.env
+supabase/.env.*
+supabase/functions/.env
+.env
+.env.*
+!.env.example
+
+# ---------------------------------------------------------------------------
+# Tooling
+# ---------------------------------------------------------------------------
+node_modules/
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+
+# Supabase local state
+supabase/.branches/
+supabase/.temp/
+
+# Generated
+/build/
+web/dist/
+web/.astro/
+screenshots/
+
+# Local Claude Code / editor config
+.claude/

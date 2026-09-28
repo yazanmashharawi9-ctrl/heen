@@ -1,0 +1,78 @@
+name: ci
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  content-and-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Validate content (sources, gradings, review hashes)
+        run: npm run content:validate
+      - name: Content files are formatted
+        run: node tools/content/format.ts --check
+      - name: App content bundle is up to date
+        run: |
+          npm run content:build
+          git diff --exit-code -- app/assets/content/moments.json
+      - run: npm run typecheck
+      - run: npm test
+
+  edge-functions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Type-check Edge Functions with their import maps
+        run: |
+          for fn in api tick send; do
+            deno check --config "supabase/functions/$fn/deno.json" "supabase/functions/$fn/index.ts"
+          done
+
+  flutter:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.44.4
+          cache: true
+      - run: flutter pub get
+      - run: dart format --output=none --set-exit-if-changed lib test
+      - run: flutter analyze
+      - run: flutter test
+
+  ios-build:
+    # Compiles for the simulator without signing, like Tubes' ci-ios.yml —
+    # catches Xcode/UIScene/plugin problems early. Free on a public repo.
+    runs-on: macos-15
+    needs: flutter
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select latest available Xcode
+        run: |
+          LATEST=$(ls -d /Applications/Xcode_*.app 2>/dev/null | sort -V | tail -1)
+          if [ -n "$LATEST" ]; then sudo xcode-select -s "$LATEST"; fi
+          xcodebuild -version
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.44.4
+          cache: true
+      - run: flutter build ios --simulator --debug --no-codesign

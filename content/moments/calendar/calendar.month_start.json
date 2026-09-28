@@ -1,0 +1,84 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "calendar.month_start",
+  "rev": 1,
+  "category": "calendar",
+  "trigger": {
+    "type": "hijri",
+    "rule": "MONTH_START"
+  },
+  "defaultOn": true,
+  "title": {
+    "ar": "رؤية الهلال",
+    "en": "Seeing the new crescent"
+  },
+  "push": {
+    "title": {
+      "ar": "هلال شهر جديد 🌙",
+      "en": "A new month's crescent 🌙"
+    },
+    "body": {
+      "ar": "إذا رأيت الهلال الليلة فقل: «اللهم أهلّه علينا باليُمن والإيمان…»",
+      "en": "If you see the crescent tonight, say: “O Allah, bring it upon us with blessing and faith…”"
+    }
+  },
+  "items": [
+    {
+      "kind": "dua",
+      "ar": "اللَّهُمَّ أَهْلِلْهُ عَلَيْنَا بِالْيُمْنِ وَالْإِيمَانِ، وَالسَّلَامَةِ وَالْإِسْلَامِ، رَبِّي وَرَبُّكَ اللَّهُ",
+      "translit": "Allāhumma ahlilhu ʿalaynā bil-yumni wal-īmān, was-salāmati wal-islām. Rabbī wa rabbuka-llāh",
+      "tr": {
+        "en": "O Allah, bring it upon us with blessing and faith, with safety and Islam. My Lord and your Lord is Allah."
+      },
+      "sources": [
+        {
+          "collection": "tirmidhi",
+          "number": "3451",
+          "numbering": "sunnah.com",
+          "narrator": "Ṭalḥah ibn ʿUbaydillāh",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "hasan",
+              "by": "al-Tirmidhi",
+              "note": "قال الترمذي: حسن غريب"
+            }
+          ],
+          "url": "https://sunnah.com/tirmidhi:3451"
+        }
+      ],
+      "explain": {
+        "ar": "كان النبي ﷺ إذا رأى الهلال دعا بهذا الدعاء. و«ربّي وربّك الله» خطابٌ للهلال: فهو مخلوقٌ مسخَّر، لا يُعبَد ولا يُتشاءم به.",
+        "en": "The Prophet ﷺ would say this when he saw the new crescent. “My Lord and your Lord is Allah” addresses the moon itself: it is a created, subservient sign — not something to worship or to draw omens from."
+      },
+      "newMuslim": {
+        "ar": "تبدأ الشهور الهجرية بظهور الهلال بعد غروب الشمس. انظر جهة الغرب بعد المغرب بقليل، فإن رأيته فقل هذا الدعاء.",
+        "en": "Hijri months begin when the new crescent appears after sunset. Look toward the west shortly after Maghrib — if you see it, say this du'a."
+      }
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "دعاء-رؤية-الهلال",
+      "en": "new-moon-dua"
+    },
+    "template": "crescent"
+  },
+  "keywords": {
+    "ar": [
+      "هلال",
+      "شهر هجري",
+      "دعاء الهلال",
+      "أول الشهر"
+    ],
+    "en": [
+      "crescent",
+      "new moon",
+      "hilal",
+      "hijri month"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}

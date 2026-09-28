@@ -1,0 +1,142 @@
+{
+  "$schema": "../../schema/moment.schema.json",
+  "id": "calendar.ayyam_al_bid",
+  "rev": 1,
+  "category": "calendar",
+  "trigger": {
+    "type": "hijri",
+    "rule": "AYYAM_AL_BID"
+  },
+  "defaultOn": true,
+  "title": {
+    "ar": "الأيام البيض",
+    "en": "The White Days"
+  },
+  "push": {
+    "title": {
+      "ar": "غدًا تبدأ الأيام البيض 🤍",
+      "en": "The White Days begin tomorrow 🤍"
+    },
+    "body": {
+      "ar": "صيام الثالث عشر والرابع عشر والخامس عشر من الشهر الهجري من السنّة. انوِ الصيام إن استطعت.",
+      "en": "Fasting the 13th, 14th and 15th of the Hijri month is a Sunnah. Intend to fast if you can."
+    }
+  },
+  "items": [
+    {
+      "kind": "practice",
+      "ar": "صيام ثلاثة أيام من كل شهر، وأفضلها الأيام البيض: الثالث عشر والرابع عشر والخامس عشر من الشهر الهجري.",
+      "quote": "يَا أَبَا ذَرٍّ، إِذَا صُمْتَ مِنَ الشَّهْرِ ثَلَاثَةَ أَيَّامٍ فَصُمْ ثَلَاثَ عَشْرَةَ، وَأَرْبَعَ عَشْرَةَ، وَخَمْسَ عَشْرَةَ",
+      "tr": {
+        "en": "Fast three days of every month — best of all the White Days: the 13th, 14th and 15th of the Hijri month."
+      },
+      "sources": [
+        {
+          "collection": "tirmidhi",
+          "number": "761",
+          "numbering": "sunnah.com",
+          "narrator": "Abū Dharr",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "hasan",
+              "by": "al-Tirmidhi"
+            }
+          ],
+          "url": "https://sunnah.com/tirmidhi:761"
+        },
+        {
+          "collection": "bukhari",
+          "number": "1981",
+          "numbering": "fath_al_bari",
+          "narrator": "Abū Hurayrah",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:1981",
+          "note": "وصية النبي ﷺ بصيام ثلاثة أيام من كل شهر"
+        },
+        {
+          "collection": "bukhari",
+          "number": "1975",
+          "numbering": "fath_al_bari",
+          "narrator": "ʿAbdullāh ibn ʿAmr",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "al-Bukhari"
+            }
+          ],
+          "url": "https://sunnah.com/bukhari:1975",
+          "note": "الحسنة بعشر أمثالها، فذلك صيام الدهر كله"
+        }
+      ],
+      "explain": {
+        "ar": "سُمّيت بيضًا لأن لياليها مضيئة بنور البدر. ومن صام ثلاثة أيام من كل شهر فكأنما صام الدهر كله، لأن الحسنة بعشر أمثالها.",
+        "en": "They are called “white” because their nights are lit by the full moon. Fasting three days every month is like fasting the whole year, because each good deed is rewarded tenfold."
+      },
+      "newMuslim": {
+        "ar": "هذا صيام تطوّع وليس فرضًا مثل رمضان: تمتنع عن الأكل والشرب من الفجر إلى المغرب. إن لم تستطع هذه المرة فلا حرج.",
+        "en": "This is a voluntary fast, not an obligation like Ramadan: no food or drink from Fajr until Maghrib. If you can't this time, there is no blame."
+      }
+    }
+  ],
+  "fiqh": [
+    {
+      "topic": {
+        "ar": "الأيام البيض في شهر ذي الحجة",
+        "en": "The White Days in Dhul-Hijjah"
+      },
+      "majority": {
+        "ar": "اليوم الثالث عشر من ذي الحجة من أيام التشريق التي لا يجوز صومها، فيُصام الرابع عشر والخامس عشر ويومٌ آخر من الشهر.",
+        "en": "The 13th of Dhul-Hijjah is one of the Days of Tashrīq, on which fasting is not allowed; fast the 14th, the 15th and another day of the month instead."
+      },
+      "sources": [
+        {
+          "collection": "muslim",
+          "number": "1141",
+          "numbering": "abdul_baqi",
+          "narrator": "Nubayshah al-Hudhalī",
+          "type": "marfu",
+          "grades": [
+            {
+              "grade": "sahih",
+              "by": "Muslim"
+            }
+          ],
+          "url": "https://sunnah.com/muslim:1141a",
+          "note": "أيام التشريق أيام أكل وشرب"
+        }
+      ]
+    }
+  ],
+  "share": {
+    "slug": {
+      "ar": "صيام-الأيام-البيض",
+      "en": "white-days-fasting"
+    },
+    "template": "full-moon"
+  },
+  "keywords": {
+    "ar": [
+      "الأيام البيض",
+      "صيام",
+      "صيام التطوع",
+      "ثلاثة أيام من كل شهر"
+    ],
+    "en": [
+      "white days",
+      "ayyam al-bid",
+      "voluntary fast",
+      "sunnah fast"
+    ]
+  },
+  "review": {
+    "status": "draft"
+  }
+}
