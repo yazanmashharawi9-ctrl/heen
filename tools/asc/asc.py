@@ -25,7 +25,9 @@ import urllib.request
 
 BASE = "https://api.appstoreconnect.apple.com"
 
-_ENV_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+# ASC_ENV_FILE lets several projects share one credentials file (e.g. the one
+# in Tubes) instead of copying the key details around.
+_ENV_FILE = os.environ.get("ASC_ENV_FILE") or os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
 
 
 def _load_env_file() -> None:

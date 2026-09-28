@@ -156,7 +156,8 @@ def register_bundle_id(bundle_id: str, name: str) -> dict:
 
 def ensure_capability(bundle_ref: str, capability: str) -> bool:
     """Enable a capability on the bundle id. Returns True if it was just enabled."""
-    existing = asc.get_all(f"/v1/bundleIds/{bundle_ref}/bundleIdCapabilities?limit=200")
+    # This relationship endpoint rejects `limit`; a bundle id has only a handful of capabilities.
+    existing = asc.get_all(f"/v1/bundleIds/{bundle_ref}/bundleIdCapabilities")
     if any(c["attributes"].get("capabilityType") == capability for c in existing):
         return False
     body = {
@@ -256,7 +257,7 @@ def main() -> None:
     have_key = os.path.exists(key_path)
 
     if remote_cert and have_key and not args.force_new_cert:
-        print(f"Reusing certificate {remote_cert['id']} with the key in {OUT}")
+        print(f"Reusing certificate {remote_cert['id']} with the key at {key_path}")
         cert = remote_cert
     else:
         if external_key:
